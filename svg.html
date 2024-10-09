@@ -1,0 +1,1969 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <title>Readme</title>
+    <style type="text/css">
+        code {
+            white-space: pre-wrap;
+            line-height: 1.3em;
+            font-style: normal;
+            border-radius: 4px;
+            max-height: 500px;
+            box-shadow: inset 0 0 2px rgba(0, 0, 0, .3)
+        }
+
+        figure img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .katex {
+            font-size: initial !important
+        }
+
+        .sidebar {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            margin-bottom: 20px
+        }
+
+        .sidebar ul {
+            padding-left: 10px
+        }
+
+        .sidebar li {
+            list-style-type: none
+        }
+
+        .sidebar a {
+            color: #333
+        }
+
+        .sidebar a .feather {
+            margin-right: 4px;
+            color: #999
+        }
+
+        .sidebar a:active {
+            color: #007bff
+        }
+
+        .sidebar a:active .feather,
+        .sidebar a:hover .feather {
+            color: inherit
+        }
+
+        img {
+            max-width: 100%
+        }
+
+        blockquote {
+            background-color: #fffbe8;
+            border-left: 4px solid gray;
+            padding-left: 20px;
+            font-style: italic
+        }
+    </style>
+    <style type="text/css">
+        pre code.hljs {
+            display: block;
+            overflow-x: auto;
+            padding: 1em
+        }
+
+        code.hljs {
+            padding: 3px 5px
+        }
+
+        .hljs {
+            background: #1e1e1e;
+            color: #dcdcdc
+        }
+
+        .hljs-keyword,
+        .hljs-literal,
+        .hljs-name,
+        .hljs-symbol {
+            color: #569cd6
+        }
+
+        .hljs-link {
+            color: #569cd6;
+            text-decoration: underline
+        }
+
+        .hljs-built_in,
+        .hljs-type {
+            color: #4ec9b0
+        }
+
+        .hljs-class,
+        .hljs-number {
+            color: #b8d7a3
+        }
+
+        .hljs-meta .hljs-string,
+        .hljs-string {
+            color: #d69d85
+        }
+
+        .hljs-regexp,
+        .hljs-template-tag {
+            color: #9a5334
+        }
+
+        .hljs-formula,
+        .hljs-function,
+        .hljs-params,
+        .hljs-subst,
+        .hljs-title {
+            color: #dcdcdc
+        }
+
+        .hljs-comment,
+        .hljs-quote {
+            color: #57a64a;
+            font-style: italic
+        }
+
+        .hljs-doctag {
+            color: #608b4e
+        }
+
+        .hljs-meta,
+        .hljs-meta .hljs-keyword,
+        .hljs-tag {
+            color: #9b9b9b
+        }
+
+        .hljs-template-variable,
+        .hljs-variable {
+            color: #bd63c5
+        }
+
+        .hljs-attr,
+        .hljs-attribute {
+            color: #9cdcfe
+        }
+
+        .hljs-section {
+            color: gold
+        }
+
+        .hljs-emphasis {
+            font-style: italic
+        }
+
+        .hljs-strong {
+            font-weight: 700
+        }
+
+        .hljs-bullet,
+        .hljs-selector-attr,
+        .hljs-selector-class,
+        .hljs-selector-id,
+        .hljs-selector-pseudo,
+        .hljs-selector-tag {
+            color: #d7ba7d
+        }
+
+        .hljs-addition {
+            background-color: #144212;
+            display: inline-block;
+            width: 100%
+        }
+
+        .hljs-deletion {
+            background-color: #600;
+            display: inline-block;
+            width: 100%
+        }
+
+        :root {
+            --chord-diagram-font-size: 10px
+        }
+
+        .chord {
+            display: inline-block;
+            position: relative;
+            user-select: none;
+            height: 3.2em;
+            font-size: 70%
+        }
+
+        .chord.diagram {
+            height: calc(1.5em + (3.5 * var(--chord-diagram-font-size)))
+        }
+
+        .chord .inner {
+            position: absolute;
+            display: block;
+            left: 0;
+            bottom: 1.3em
+        }
+
+        .chord i {
+            font-style: normal;
+            display: inline-block
+        }
+
+        .chord i.diagram {
+            font: 100 var(--chord-diagram-font-size) Courier;
+            line-height: .5em;
+            position: absolute;
+            bottom: 0;
+            display: none
+        }
+
+        .chord .inner:hover i.diagram,
+        .chord i.diagram.show,
+        .chord.diagram i.diagram {
+            display: inline-block
+        }
+
+        .chord:not(.diagram) .inner:hover i.diagram {
+            background: #fff;
+            z-index: 5
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body class="py-5">
+
+
+
+
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo-font">
+                <span class="text-red">PG</span>'s Blog
+            </a>
+
+            <div class="menu-icon-container">
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>                      
+                </label>
+            </div>
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Blog</a>
+            <a href="https://prashantgyawali.github.io/Portfolio/">Portfolio</a>
+            <a href="https://prashantgyawali.github.io/Portfolio/">Projects</a>
+            <a href="https://prashantgyawali.github.io/Portfolio/">Resume</a>
+        </div>
+
+        <div class="nav-expanded">
+            <div class="nav-links-vertical">
+                <a href="/">Blog</a>
+                <a href="https://prashantgyawali.github.io/Portfolio/">Portfolio</a>
+                <a href="https://prashantgyawali.github.io/Portfolio/">Projects</a>
+                <a href="https://prashantgyawali.github.io/Portfolio/">Resume</a>
+            </div>
+        </div>
+    </nav>
+    <style>
+        .logo-font {
+            font-size: min(25px, max(28px, calc(100vw / 10)));
+            text-stroke: 0.5px #171717;
+            -webkit-text-stroke: 0.5px #171717;
+            text-decoration: none;
+        }
+
+        .text-red {
+            color: rgb(255, 0, 0);
+        }
+
+        .navbar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background-color: white;
+            padding: 5px 15px ; 
+            position: fixed;
+            top: 0;
+            z-index: 10;
+            border-bottom: 2px solid #E5E5E5;
+        }
+
+        .nav-container {
+            display: flex; 
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        @media (min-width: 640px) {
+            .nav-container {
+                width: auto;
+                display: block;
+            }
+        }
+
+        .nav-expanded {
+            display: none;
+            padding: 0px max(4vw, 15px) 5px max(4vw, 15px);
+            gap: 5px;
+            flex-direction: column;
+            align-items: start;
+            justify-content: start;
+            background-color: #fbfbfb;
+            border-bottom: #171717 1px solid;
+            border-top: #171717 1px solid;
+
+            user-select: none;
+
+            .nav-links-vertical {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                border-bottom: 1px solid #bababa;
+                gap: 10px;
+
+                a {
+                    color: rgb(81, 81, 81);
+                    position: relative;
+                }
+
+                a::before {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 2.5px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: rgb(0, 0, 255);
+                    transform: scaleX(0);
+                    transform-origin: top left;
+                    transition: transform 0.1s ease;
+                }
+
+                a:hover::before {
+                    transform: scaleX(1);
+                }
+            }
+        }
+
+        .menu-icon-container {
+            display: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: rgb(81, 81, 81);
+            position: relative;
+            text-decoration: none;
+        }
+
+        .nav-links a::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 2.5px;
+            bottom: 0;
+            left: 0;
+            background-color: rgb(0, 0, 255);
+            transform: scaleX(0);
+            transform-origin: top left;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-links a:hover::before {
+            transform: scaleX(1);
+        }
+
+
+        @media (max-width: 640px) {
+            .nav-links {
+                display: none;
+            }
+
+            .menu-icon-container {
+                display: block;
+            }
+
+            #menu-toggle {
+                display: none;
+            }
+
+            .menu-icon {
+                width: 30px;
+                height: 30px;
+                background: url('menu-icon.svg') no-repeat center;
+                cursor: pointer;
+            }
+
+            .navbar:has(#menu-toggle:checked) .nav-expanded {
+                display: flex;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                background-color: #fbfbfb;
+                border-top: 1px solid #171717;
+                border-bottom: 1px solid #171717;
+            }
+
+            .nav-expanded {
+                display: none;
+                padding: 5px 15px;
+            }
+
+            .nav-links-vertical {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                border-bottom: 1px solid #bababa;
+            }
+
+            .nav-links-vertical a {
+                color: rgb(81, 81, 81);
+                position: relative;
+                text-decoration: none;
+            }
+
+            .nav-links-vertical a::before {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 2.5px;
+                bottom: 0;
+                left: 0;
+                background-color: rgb(0, 0, 255);
+                transform: scaleX(0);
+                transform-origin: top left;
+                transition: transform 0.1s ease;
+            }
+
+            .nav-links-vertical a:hover::before {
+                transform: scaleX(1);
+            }
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <nav class="sidebar">
+                    <h4>Table of contents</h4>
+                    <ul>
+                        <li><a href="#what-is-svg">What is SVG?</a></li>
+                        <li><a href="#svg-animations">SVG Animations</a>
+                            <a href="#step-by-step-css-svg-animations">Step-by-Step: CSS SVG Animations</a>
+                        </li>
+                        <li><a href="#1-drawing-the-svg">1. Drawing the SVG</a></li>
+                        <li><a href="#2-applying-css-to-animate-the-svg">2. Applying CSS to Animate the SVG</a>
+                            <ul>
+                                <li><a href="#css-for-animating-the-circle-hover-effect">CSS for Animating the Circle
+                                        (Hover Effect)</a></li>
+                                <li><a href="#css-for-animating-the-rectangle-rotation">CSS for Animating the Rectangle
+                                        (Rotation)</a></li>
+                                <li><a href="#lets-add-a-triangle-now">Let's add a triangle now</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#3-full-example">3. Full Example</a></li>
+                        <li><a href="#advanced-css-svg-animations">Advanced CSS SVG Animations</a></li>
+                        <li><a href="#1-stroke-dasharray-animation-animating-drawing-effect">1. Stroke Dasharray
+                                Animation (Animating Drawing Effect)</a></li>
+                        <li><a href="#2-morphing-svg-paths">2. Morphing SVG Paths</a>
+                            <ul>
+                                <li><a href="#svg">SVG:</a></li>
+                                <li><a href="#css-for-morphing">CSS for Morphing:</a></li>
+                                <li><a href="#example">Example</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#lets-have-fun">Lets have fun</a></li>
+                        <li><a href="#final-touches">Final Touches</a></li>
+                        <li><a href="#more-examples">More Examples</a></li>
+                        <li><a href="#loader">Loader</a></li>
+                        <li><a href="#appear">Appear</a></li>
+                        <li><a href="#draw-path">Draw Path</a></li>
+                        <li><a href="#underline-animations">Underline animations</a>
+                            <ul>
+                                <li><a href="#underline-1">Underline-1</a></li>
+                                <li><a href="#underline-2">Underline-2</a></li>
+                                <li><a href="#in-action">In action</a></li>
+                            </ul>
+                        <li><a href="#conclusion">Conclusion</a></li>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+            <div class="col-lg-8 main">
+                <h2 id="getting-started-with-svg-animations-a-beginner-friendly-guide" tabindex="-1">Getting started
+                    with SVG animations: A Beginner-Friendly Guide</h2>
+                <hr>
+                <p>When it comes to making your website stand out, animations can be a powerful tool. One of the best
+                    ways to create scalable and high-quality animations on the web is by using <strong>SVG (Scalable
+                        Vector Graphics)</strong>. Combined with CSS, SVG animations offer a lightweight, flexible, and
+                    highly customizable solution.</p>
+                <p>In this guide, we’ll walk through the basics of SVG animations , and by the end, you’ll know how to
+                    bring life to your web pages with easy-to-follow examples.</p>
+                <h3 id="what-is-svg" tabindex="-1">What is SVG?</h3>
+                <p>SVG is an XML-based format for vector graphics. Unlike other image formats (like JPEG or PNG), SVG is
+                    scalable, which means it can be resized without losing quality. This makes it ideal for responsive
+                    web design, where the same image needs to look sharp across a variety of screen sizes.</p>
+                <h3 id="svg-animations" tabindex="-1">SVG Animations</h3>
+                <p>SVGs can be animated using JavaScript or SMIL (Synchronized Multimedia Integration Language), CSS
+                    animations.</p>
+                <hr>
+                <h2 id="step-by-step-css-svg-animations" tabindex="-1">Step-by-Step: CSS SVG Animations</h2>
+                <p>Let’s start from the basics creating an SVG and then animating it using CSS.</p>
+                <h3 id="1-drawing-the-svg" tabindex="-1">1. Drawing the SVG</h3>
+                <p>Let's create a simple SVG with a circle and rectangle. Here’s the basic SVG code:</p>
+                <pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;200&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;200&quot;</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.w3.org/2000/svg&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">circle</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;100&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;100&quot;</span> <span class="hljs-attr">r</span>=<span class="hljs-string">&quot;50&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;blue&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myCircle&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">rect</span> <span class="hljs-attr">x</span>=<span class="hljs-string">&quot;50&quot;</span> <span class="hljs-attr">y</span>=<span class="hljs-string">&quot;50&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;100&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;100&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;red&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myRect&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+</code></pre>
+                <p>This SVG contains:</p>
+                <ul>
+                    <li>A <strong>circle</strong> with a radius of 50 units and positioned in the center.</li>
+                    <li>A <strong>rectangle</strong> that is 100x100 in size, positioned at (50, 50).</li>
+                </ul>
+                <h3 id="2-applying-css-to-animate-the-svg" tabindex="-1">2. Applying CSS to Animate the SVG</h3>
+                <p>Let’s start animating the shapes. We’ll animate the circle to increase its size and change its color
+                    when hovered, and the rectangle will rotate continuously.</p>
+                <h4 id="css-for-animating-the-circle-hover-effect" tabindex="-1">CSS for Animating the Circle (Hover
+                    Effect)</h4>
+                <pre><code class="hljs"><span class="hljs-selector-id">#myCircle</span> {
+    <span class="hljs-attribute">transition</span>: all <span class="hljs-number">0.5s</span> ease;
+}
+
+<span class="hljs-selector-id">#myCircle</span><span class="hljs-selector-pseudo">:hover</span> {
+    <span class="hljs-attribute">r</span>: <span class="hljs-number">70</span>;
+    <span class="hljs-attribute">fill</span>: green;
+}
+</code></pre>
+                <ul>
+                    <li><code>transition: all 0.5s ease</code>: This makes the animation smooth, transitioning over 0.5
+                        seconds.</li>
+                    <li>On hover, the circle’s radius (<code>r</code>) expands to 70 and changes color to green.</li>
+                </ul>
+                <h4 id="css-for-animating-the-rectangle-rotation" tabindex="-1">CSS for Animating the Rectangle
+                    (Rotation)</h4>
+                <p>For the rectangle, we’ll create a keyframe animation that rotates the rectangle infinitely.</p>
+                <pre><code class="hljs"><span class="hljs-selector-id">#myRect</span> {
+    <span class="hljs-attribute">animation</span>: rotateRect <span class="hljs-number">4s</span> linear infinite;
+    <span class="hljs-attribute">transform-origin</span>: center;
+}
+
+<span class="hljs-keyword">@keyframes</span> rotateRect {
+    <span class="hljs-number">0%</span> {
+        <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">0deg</span>);
+    }
+    <span class="hljs-number">100%</span> {
+        <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">360deg</span>);
+    }
+}
+</code></pre>
+                <ul>
+                    <li><code>animation: rotateRect 4s linear infinite</code>: This animates the rectangle’s rotation
+                        continuously in a 4-second cycle.</li>
+                    <li><code>transform-origin: center</code>: Ensures the rotation happens from the center of the
+                        rectangle.</li>
+                </ul>
+                <h4 id="lets-add-a-triangle-now" tabindex="-1">Let's add a triangle now</h4>
+                <p>For triangle we will use polygon tag with points attribute which defines the vertices of the polygon.
+                    Lets rotate it as well.</p>
+                <h3 id="3-full-example" tabindex="-1">3. Full Example</h3>
+                <p>Now let’s put everything together with the complete HTML and CSS:</p>
+                <pre><code class="hljs"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>CSS SVG Animation Example<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="language-css"> <span class="hljs-selector-id">#myCircle</span> {
+            <span class="hljs-attribute">transition</span>: all <span class="hljs-number">0.5s</span> ease;
+        }
+
+        <span class="hljs-selector-id">#myCircle</span><span class="hljs-selector-pseudo">:hover</span> {
+            <span class="hljs-attribute">r</span>: <span class="hljs-number">90</span>;
+            <span class="hljs-attribute">fill</span>: green;
+        }
+
+        <span class="hljs-selector-id">#myRect</span> {
+            <span class="hljs-attribute">animation</span>: rotateRect <span class="hljs-number">4s</span> linear infinite;
+            <span class="hljs-attribute">transform-origin</span>: center;
+        }
+
+        <span class="hljs-keyword">@keyframes</span> rotateRect {
+            <span class="hljs-number">0%</span> {
+                <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">0deg</span>);
+            }
+            <span class="hljs-number">100%</span> {
+                <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">360deg</span>);
+            }
+        }
+		<span class="hljs-selector-id">#myTriangle</span>{
+		<span class="hljs-attribute">animation</span>: rotateRect <span class="hljs-number">4s</span> linear infinite;
+            <span class="hljs-attribute">transform-origin</span>: center;
+		}
+ </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;200&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;200&quot;</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.w3.org/2000/svg&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">circle</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;100&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;100&quot;</span> <span class="hljs-attr">r</span>=<span class="hljs-string">&quot;100&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;blue&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myCircle&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">rect</span> <span class="hljs-attr">x</span>=<span class="hljs-string">&quot;50&quot;</span> <span class="hljs-attr">y</span>=<span class="hljs-string">&quot;50&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;100&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;100&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;red&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myRect&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">polygon</span> <span class="hljs-attr">points</span>=<span class="hljs-string">&quot;50,50 100,100 50,150&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;yellow&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myTriangle&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+                <style>
+                    #myCircle {
+                        transition: all .5s ease
+                    }
+
+                    #myCircle:hover {
+                        fill: green;
+                        r:90;
+                    }
+
+                    #myRect {
+                        animation: rotateRect 4s linear infinite;
+                        transform-origin: center;
+                    }
+
+                    @keyframes rotateRect {
+                        0% {
+                            transform: rotate(0)
+                        }
+
+                        100% {
+                            transform: rotate(360deg)
+                        }
+                    }
+
+                    #myTriangle {
+                        animation: rotateRect 4s linear infinite;
+                        transform-origin: center
+                    }
+                </style>
+                <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="100" fill="blue" id="myCircle" />
+                    <rect x="50" y="50" width="100" height="100" fill="red" id="myRect" />
+                    <polygon points="50,50 100,100 50,150" fill="yellow" id="myTriangle" />
+                </svg>
+                <p>We saw how to create simple hover and rotatic svg animations. Lets try something bit more advanced.
+                </p>
+                <hr>
+                <h2 id="advanced-css-svg-animations" tabindex="-1">Advanced CSS SVG Animations</h2>
+                <p>Let’s move to slightly more complex animations, such as animating the <strong>stroke</strong> of an
+                    SVG path and creating <strong>morphing effects</strong>.</p>
+                <h3 id="1-stroke-dasharray-animation-animating-drawing-effect" tabindex="-1">1. Stroke Dasharray
+                    Animation (Animating Drawing Effect)</h3>
+                <p>We can animate the stroke of a shape to create a “drawing” effect. This is achieved using the
+                    <code>stroke-dasharray</code> and <code>stroke-dashoffset</code> properties. The
+                    <code>stroke-dasharray</code> and <code>stroke-dashoffset</code> can be changed during an animation
+                    to give various effects. <code>stroke-dashoffset</code> is like how back from, do you want to start
+                    the stroke and changing stroke-dasharray will change how many dashes appear.
+                </p>
+                <blockquote>
+                    <p><strong>Note:</strong> The <strong>stroke-dashoffset</strong> can be calculated for a path or
+                        circle using simple javascript.</p>
+                </blockquote>
+                <pre><code class="hljs"><span class="hljs-keyword">let</span> svg = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">&quot;svg&quot;</span>);
+
+<span class="hljs-keyword">if</span> (circle) {
+    <span class="hljs-keyword">let</span> paths = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelectorAll</span>(<span class="hljs-string">&quot;circle,ellipse,path&quot;</span>); <span class="hljs-comment">//selects stuff like circle, ellipse and path present in the svg</span>
+    <span class="hljs-keyword">if</span> (paths.<span class="hljs-property">length</span>) {
+        <span class="hljs-keyword">for</span> ([index, path] <span class="hljs-keyword">of</span> paths.<span class="hljs-title function_">entries</span>()) {
+            <span class="hljs-keyword">let</span> pathLength = path.<span class="hljs-title function_">getTotalLength</span>();
+            <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`Path #<span class="hljs-subst">${index + <span class="hljs-number">1</span>}</span>: <span class="hljs-subst">${pathLength}</span>`</span>);
+        }
+    }
+}
+</code></pre>
+                <p>Now that, its done let’s animate a circle's stroke:</p>
+                <pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;200&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;200&quot;</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.w3.org/2000/svg&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">circle</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;100&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;100&quot;</span> <span class="hljs-attr">r</span>=<span class="hljs-string">&quot;50&quot;</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;blue&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;none&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;drawCircle&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+</code></pre>
+                <p>CSS for drawing effect:</p>
+                <pre><code class="hljs"><span class="hljs-selector-id">#drawCircle</span> {
+    <span class="hljs-attribute">stroke-dasharray</span>: <span class="hljs-number">314</span>;
+    <span class="hljs-attribute">stroke-dashoffset</span>: <span class="hljs-number">314</span>;
+    <span class="hljs-attribute">animation</span>: draw <span class="hljs-number">2s</span> ease-in-out forwards;
+}
+
+<span class="hljs-keyword">@keyframes</span> draw {
+    <span class="hljs-selector-tag">to</span> {
+        <span class="hljs-attribute">stroke-dashoffset</span>: <span class="hljs-number">0</span>;
+    }
+}
+</code></pre>
+                <ul>
+                    <li><code>stroke-dasharray</code> sets the total length of the dash pattern for the stroke.</li>
+                    <li><code>stroke-dashoffset</code> offsets the stroke’s starting point, initially hiding it.</li>
+                    <li>The animation reduces the offset to 0, revealing the stroke gradually.</li>
+                </ul>
+                <p>The result:
+                <blockquote>
+                    <p><strong>Note:</strong> For viewing purposes, the code has been changed to loop the animation</p>
+                </blockquote>
+                <br>
+                <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="50" stroke="blue" fill="none" stroke-width="5" id="drawCircle" />
+                </svg></p>
+                <style>
+                    #drawCircle {
+                        stroke-dasharray: 314;
+                        stroke-dashoffset: 314;
+                        animation: draw-circ 4s ease-in-out infinite forwards
+                    }
+
+                    @keyframes draw-circ {
+                        50% {
+                            stroke-dashoffset: 0
+                        }
+
+                        100% {
+                            stroke-dashoffset: 0
+                        }
+                    }
+                </style>
+
+
+                <h3 id="2-morphing-svg-paths" tabindex="-1">2. Morphing SVG Paths</h3>
+                <p>SVG paths can morph into one another if they have the same number of points (will be instant jump and
+                    not smooth transition if not the same number of points). This creates a smooth transition between
+                    two shapes. Here’s how to animate the morphing of two shapes using CSS.</p>
+                <h4 id="svg" tabindex="-1">SVG:</h4>
+                <pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;200&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;200&quot;</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">&quot;0 0 100 100&quot;</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.w3.org/2000/svg&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">&quot;M10 10 H90 V90 H10 Z&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;blue&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;morphPath&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+</code></pre>
+                <h4 id="css-for-morphing" tabindex="-1">CSS for Morphing:</h4>
+                <pre><code class="hljs"><span class="hljs-selector-id">#morphPath</span> {
+    <span class="hljs-attribute">animation</span>: morph <span class="hljs-number">1.5s</span> ease-in-out infinite alternate;
+}
+
+<span class="hljs-keyword">@keyframes</span> morph {
+    <span class="hljs-number">0%</span> {
+        d: <span class="hljs-built_in">path</span>(<span class="hljs-string">&quot;M10 10 H90 V90 H10 Z&quot;</span>);
+    }
+    <span class="hljs-number">100%</span> {
+        d: <span class="hljs-built_in">path</span>(<span class="hljs-string">&quot;M50 10 C20 30, 80 70, 50 90 Z&quot;</span>);
+    }
+}
+</code></pre>
+                <ul>
+                    <li>The path <code>d</code> attribute animates between two different shapes: a square and a more
+                        complex curved path.</li>
+                    <li>This creates a jump between the two.</li>
+                </ul>
+
+                <svg width="200" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 10 H90 V90 H10 Z" fill="blue" id="morphPath" />
+                </svg>
+                <style>
+                    #morphPath {
+                        animation: morph 1.5s ease-in-out infinite alternate
+                    }
+
+                    @keyframes morph {
+                        0% {
+                            d: path("M10 10 H90 V90 H10 Z");
+                        }
+
+                        100% {
+                            d: path("M50 10 C20 30, 80 70, 50 90 Z");
+                        }
+                    }
+                </style>
+
+                <hr>
+                <h4 id="example" tabindex="-1">Example</h4>
+                <p>For this example, I have created a very simple keyframes using <a
+                        href="https://boxy-svg.com/app">Boxy-svg</a> This tool lets us create, insert, edit and copy
+                    svgs instantly.</p>
+                <pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">&quot;14.614 11.542 468.878 475.167&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;468.878&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;475.167&quot;</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.w3.org/2000/svg&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;stroke-width: 8px; fill: black; stroke: rgb(0, 0, 0);&quot;</span> <span class="hljs-attr">d</span>=<span class="hljs-string">&quot;M 14.614 11.542 L 14.614 244.143 L 14.614 486.01 L 235.241 486.34 L 481.396 486.709 L 482.469 244.63 L 483.492 13.638 L 237.148 12.537 L 14.614 11.542 Z&quot;</span> <span class="hljs-attr">transform</span>=<span class="hljs-string">&quot;matrix(0.9999999999999999, 0, 0, 0.9999999999999999, 1.4210854715202004e-14, 0)&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;svgpath&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+</code></pre>
+                <pre><code class="hljs"><span class="hljs-selector-id">#svgpath</span> {
+    <span class="hljs-attribute">animation</span>: morphShape <span class="hljs-number">2s</span> infinite ease-in ;
+}
+<span class="hljs-keyword">@keyframes</span> morphShape {
+    <span class="hljs-number">33%</span> {
+        d: <span class="hljs-built_in">path</span>(<span class="hljs-string">&quot;M 14.614 11.542 L 230.535 218.987 L 14.614 486.01 L 254.807 257.142 L 481.396 486.709 L 286.812 235.546 L 483.492 13.638 L 261.605 194.916 L 14.614 11.542 Z&quot;</span>);
+    }
+  <span class="hljs-number">66%</span>{
+    d:<span class="hljs-built_in">path</span>(<span class="hljs-string">&quot;M 254.993 7.349 L 230.535 218.987 L 4.831 229.56 L 254.807 257.142 L 261.981 492.998 L 286.812 235.546 L 491.179 213.488 L 261.605 194.916 L 254.993 7.349 Z&quot;</span>)
+  }
+  <span class="hljs-number">100%</span>{
+    d:<span class="hljs-built_in">path</span>(<span class="hljs-string">&quot;M 254.993 7.349 L 7.626 10.752 L 9.024 229.56 L 8.838 491.232 L 261.981 492.998 L 490.854 491.996 L 491.179 213.488 L 492.201 9.042 L 254.993 7.349 Z&quot;</span>)
+  }
+}
+</code></pre>
+                <svg viewBox="14.614 11.542 468.878 475.167" width="468.878" height="475.167"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path style="stroke-width:8px;fill:#000;stroke:#000"
+                        d="M 14.614 11.542 L 14.614 244.143 L 14.614 486.01 L 235.241 486.34 L 481.396 486.709 L 482.469 244.63 L 483.492 13.638 L 237.148 12.537 L 14.614 11.542 Z"
+                        transform="matrix(0.9999999999999999, 0, 0, 0.9999999999999999, 1.4210854715202004e-14, 0)"
+                        id="svgpath" />
+                </svg>
+                <style>
+                    #svgpath {
+                        animation: morphShape 2s infinite ease-in
+                    }
+
+                    @keyframes morphShape {
+                        33% {
+                            d: path("M 14.614 11.542 L 230.535 218.987 L 14.614 486.01 L 254.807 257.142 L 481.396 486.709 L 286.812 235.546 L 483.492 13.638 L 261.605 194.916 L 14.614 11.542 Z");
+                        }
+
+                        66% {
+                            d: path("M 254.993 7.349 L 230.535 218.987 L 4.831 229.56 L 254.807 257.142 L 261.981 492.998 L 286.812 235.546 L 491.179 213.488 L 261.605 194.916 L 254.993 7.349 Z")
+                        }
+
+                        100% {
+                            d: path("M 254.993 7.349 L 7.626 10.752 L 9.024 229.56 L 8.838 491.232 L 261.981 492.998 L 490.854 491.996 L 491.179 213.488 L 492.201 9.042 L 254.993 7.349 Z")
+                        }
+                    }
+                </style>
+                <hr>
+                <h3 id="lets-have-fun" tabindex="-1">Lets have fun</h3>
+                <p>I have created a fun little svg to play with.</p>
+                <pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.w3.org/2000/svg&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;100px&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;100px&quot;</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">&quot;-2 -1 54 62&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;menu&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">circle</span> <span class="hljs-attr">r</span>=<span class="hljs-string">&quot;30&quot;</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;25&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;30&quot;</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-attr">stroke-linejoin</span>=<span class="hljs-string">&quot;round&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;aquamarine&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;face&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">circle</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ellipse</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;7&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;15&quot;</span> <span class="hljs-attr">rx</span>=<span class="hljs-string">&quot;8&quot;</span> <span class="hljs-attr">ry</span>=<span class="hljs-string">&quot;10&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;white&quot;</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;1.5&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;eyeouter-left&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ellipse</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ellipse</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;7&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;15&quot;</span> <span class="hljs-attr">rx</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">ry</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;eye-left&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ellipse</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ellipse</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;42&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;15&quot;</span> <span class="hljs-attr">rx</span>=<span class="hljs-string">&quot;8&quot;</span> <span class="hljs-attr">ry</span>=<span class="hljs-string">&quot;10&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;white&quot;</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;1.5&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;eyeouter-right&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ellipse</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ellipse</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;42&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;15&quot;</span> <span class="hljs-attr">rx</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">ry</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;eye-right&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ellipse</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">&quot;M10,50 13.5,50 17.5,50 21.5,50  25,50   28.5,50  32.5,50  36.25,50 40,50z&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;red&quot;</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">stroke-linejoin</span>=<span class="hljs-string">&quot;round&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;2&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;smile&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+</code></pre>
+                <svg xmlns="http://www.w3.org/2000/svg" width="100px" height="100px" viewBox="-2 -1 54 62" class="menu">
+                    <circle r="30" cx="25" cy="30" stroke="black" stroke-width="1" stroke-linejoin="round"
+                        fill="aquamarine" class="face"></circle>
+                    <ellipse cx="7" cy="15" rx="8" ry="10" fill="white" stroke="black" stroke-width="1.5"
+                        class="eyeouter-left"></ellipse>
+                    <ellipse cx="7" cy="15" rx="5" ry="5" fill="black" class="eye-left"></ellipse>
+                    <ellipse cx="42" cy="15" rx="8" ry="10" fill="white" stroke="black" stroke-width="1.5"
+                        class="eyeouter-right"></ellipse>
+                    <ellipse cx="42" cy="15" rx="5" ry="5" fill="black" class="eye-right"></ellipse>
+                    <path d="M10,50 13.5,50 17.5,50 21.5,50  25,50   28.5,50  32.5,50  36.25,50 40,50z" fill="red"
+                        stroke="black" stroke-linejoin="round" stroke-width="2" class="smile"></path>
+                </svg>
+                <p>Lets create a simple hover animation that will make it smile.</p>
+                <pre><code class="hljs">        <span class="hljs-selector-id">#svg-hover-transform</span> {
+            <span class="hljs-selector-class">.smile</span> {
+                <span class="hljs-attribute">transition</span>: <span class="hljs-number">0.6s</span> linear d;
+            }
+
+            <span class="hljs-selector-class">.menu</span><span class="hljs-selector-pseudo">:hover</span> <span class="hljs-selector-class">.smile</span> {
+                d: <span class="hljs-built_in">path</span>(<span class="hljs-string">&quot;M10,50 13.5,52.5  17.5,53.5  21.5,54.5  25,55   28.5, 54.5  32.5,53.5  36.25,52.5 40,50z&quot;</span>
+                    );
+            }
+        }
+</code></pre>
+                <p>The result:</p>
+                <div id="svg-hover-transform">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100px" height="100px" viewBox="-2 -1 54 62"
+                        class="menu">
+                        <circle r="30" cx="25" cy="30" stroke="black" stroke-width="1" stroke-linejoin="round"
+                            fill="aquamarine" class="face"></circle>
+                        <ellipse cx="7" cy="15" rx="8" ry="10" fill="white" stroke="black" stroke-width="1.5"
+                            class="eyeouter-left">
+                        </ellipse>
+                        <ellipse cx="7" cy="15" rx="5" ry="5" fill="black" class="eye-left"></ellipse>
+                        <ellipse cx="42" cy="15" rx="8" ry="10" fill="white" stroke="black" stroke-width="1.5"
+                            class="eyeouter-right"></ellipse>
+                        <ellipse cx="42" cy="15" rx="5" ry="5" fill="black" class="eye-right"></ellipse>
+                        <!-- Mouth -->
+                        <path d="M10,50 13.5,50 17.5,50 21.5,50  25,50   28.5,50  32.5,50  36.25,50 40,50z" fill="red"
+                            stroke="black" stroke-linejoin="round" stroke-width="2" class="smile"></path>
+                    </svg>
+                </div>
+                <style>
+                    #svg-hover-transform {
+                        .smile {
+                            transition: 0.6s linear d;
+                        }
+
+                        .menu:hover .smile {
+                            d: path("M10,50 13.5,52.5  17.5,53.5  21.5,54.5  25,55   28.5, 54.5  32.5,53.5  36.25,52.5 40,50z");
+                        }
+                    }
+                </style>
+                <p>For the next part, lets try to recreate the draw effect</p>
+                <pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;svg-draw-effect&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.w3.org/2000/svg&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;100px&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;100px&quot;</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">&quot;-2 -1 54 62&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;menu&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">circle</span> <span class="hljs-attr">r</span>=<span class="hljs-string">&quot;30&quot;</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;25&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;30&quot;</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-attr">stroke-linejoin</span>=<span class="hljs-string">&quot;round&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;aquamarine&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;face&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">circle</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ellipse</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;7&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;15&quot;</span> <span class="hljs-attr">rx</span>=<span class="hljs-string">&quot;8&quot;</span> <span class="hljs-attr">ry</span>=<span class="hljs-string">&quot;10&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;white&quot;</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;1.5&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;eyeouter-left&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ellipse</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ellipse</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;7&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;15&quot;</span> <span class="hljs-attr">rx</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">ry</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;eye-left&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ellipse</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ellipse</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;42&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;15&quot;</span> <span class="hljs-attr">rx</span>=<span class="hljs-string">&quot;8&quot;</span> <span class="hljs-attr">ry</span>=<span class="hljs-string">&quot;10&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;white&quot;</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;1.5&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;eyeouter-right&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ellipse</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ellipse</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;42&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;15&quot;</span> <span class="hljs-attr">rx</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">ry</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;eye-right&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ellipse</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">&quot;M10,50 13.5,50 17.5,50 21.5,50  25,50   28.5,50  32.5,50  36.25,50 40,50z&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;red&quot;</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">stroke-linejoin</span>=<span class="hljs-string">&quot;round&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;2&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;smile&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+                <pre><code class="hljs"><span class="hljs-selector-id">#svg-draw-effect</span> {
+    <span class="hljs-selector-class">.face</span> {
+        <span class="hljs-attribute">animation</span>: draw-once <span class="hljs-number">4s</span> linear;
+    }
+}
+
+<span class="hljs-keyword">@keyframes</span> draw-once {
+    <span class="hljs-number">0%</span> {
+        <span class="hljs-attribute">stroke-dasharray</span>: <span class="hljs-number">188</span>;
+        <span class="hljs-attribute">stroke-dashoffset</span>: <span class="hljs-number">188</span>;
+        <span class="hljs-attribute">stroke</span>: white;
+        <span class="hljs-attribute">fill</span>: transparent;
+    }
+
+    <span class="hljs-number">100%</span> {
+        <span class="hljs-attribute">stroke-dasharray</span>: <span class="hljs-number">188</span>;
+        <span class="hljs-attribute">stroke-dashoffset</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">fill</span>: aquamarine;
+        <span class="hljs-attribute">stroke</span>: black;
+    }
+}
+</code></pre>
+                <div id="svg-draw-effect">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100px" height="100px" viewBox="-2 -1 54 62"
+                        class="menu">
+                        <circle r="30" cx="25" cy="30" stroke="black" stroke-width="1" stroke-linejoin="round"
+                            fill="aquamarine" class="face"></circle>
+                        <ellipse cx="7" cy="15" rx="8" ry="10" fill="white" stroke="black" stroke-width="1.5"
+                            class="eyeouter-left">
+                        </ellipse>
+                        <ellipse cx="7" cy="15" rx="5" ry="5" fill="black" class="eye-left"></ellipse>
+                        <ellipse cx="42" cy="15" rx="8" ry="10" fill="white" stroke="black" stroke-width="1.5"
+                            class="eyeouter-right"></ellipse>
+                        <ellipse cx="42" cy="15" rx="5" ry="5" fill="black" class="eye-right"></ellipse>
+                        <path d="M10,50 13.5,50 17.5,50 21.5,50  25,50   28.5,50  32.5,50  36.25,50 40,50z" fill="red"
+                            stroke="black" stroke-linejoin="round" stroke-width="2" class="smile"></path>
+                    </svg>
+                </div>
+                <style>
+                    #svg-draw-effect {
+                        .face {
+                            animation: draw-once 8s linear infinite;
+                        }
+                    }
+
+                    @keyframes draw-once {
+                        0% {
+                            stroke-dasharray: 188;
+                            stroke-dashoffset: 188;
+                            stroke: white;
+                            fill: transparent;
+                        }
+
+                        50% {
+                            stroke-dasharray: 188;
+                            stroke-dashoffset: 0;
+                            fill: aquamarine;
+                            stroke: black;
+                        }
+                    }
+                </style>
+                <p>Changing some values we can get various effects. Lets look at 2 variants: alternate and half-stroke
+                </p>
+                <pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;svg-draw-effect-alternate&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.w3.org/2000/svg&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;100px&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;100px&quot;</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">&quot;-2 -1 54 62&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;menu&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">circle</span> <span class="hljs-attr">r</span>=<span class="hljs-string">&quot;30&quot;</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;25&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;30&quot;</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-attr">stroke-linejoin</span>=<span class="hljs-string">&quot;round&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;aquamarine&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;face&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">circle</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ellipse</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;7&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;15&quot;</span> <span class="hljs-attr">rx</span>=<span class="hljs-string">&quot;8&quot;</span> <span class="hljs-attr">ry</span>=<span class="hljs-string">&quot;10&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;white&quot;</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;1.5&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;eyeouter-left&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ellipse</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ellipse</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;7&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;15&quot;</span> <span class="hljs-attr">rx</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">ry</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;eye-left&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ellipse</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ellipse</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;42&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;15&quot;</span> <span class="hljs-attr">rx</span>=<span class="hljs-string">&quot;8&quot;</span> <span class="hljs-attr">ry</span>=<span class="hljs-string">&quot;10&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;white&quot;</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;1.5&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;eyeouter-right&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ellipse</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ellipse</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;42&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;15&quot;</span> <span class="hljs-attr">rx</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">ry</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;eye-right&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ellipse</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">&quot;M10,50 13.5,50 17.5,50 21.5,50  25,50   28.5,50  32.5,50  36.25,50 40,50z&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;red&quot;</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">stroke-linejoin</span>=<span class="hljs-string">&quot;round&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;2&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;smile&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;svg-draw-effect-half-alternate&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.w3.org/2000/svg&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;100px&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;100px&quot;</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">&quot;-2 -1 54 62&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;menu&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">circle</span> <span class="hljs-attr">r</span>=<span class="hljs-string">&quot;30&quot;</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;25&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;30&quot;</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-attr">stroke-linejoin</span>=<span class="hljs-string">&quot;round&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;aquamarine&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;face&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">circle</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ellipse</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;7&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;15&quot;</span> <span class="hljs-attr">rx</span>=<span class="hljs-string">&quot;8&quot;</span> <span class="hljs-attr">ry</span>=<span class="hljs-string">&quot;10&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;white&quot;</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;1.5&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;eyeouter-left&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ellipse</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ellipse</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;7&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;15&quot;</span> <span class="hljs-attr">rx</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">ry</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;eye-left&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ellipse</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">ellipse</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;42&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;15&quot;</span> <span class="hljs-attr">rx</span>=<span class="hljs-string">&quot;8&quot;</span> <span class="hljs-attr">ry</span>=<span class="hljs-string">&quot;10&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;white&quot;</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;1.5&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;eyeouter-right&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ellipse</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ellipse</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;42&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;15&quot;</span> <span class="hljs-attr">rx</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">ry</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;eye-right&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ellipse</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">&quot;M10,50 13.5,50 17.5,50 21.5,50  25,50   28.5,50  32.5,50  36.25,50 40,50z&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;red&quot;</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">stroke-linejoin</span>=<span class="hljs-string">&quot;round&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;2&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;smile&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="language-css">
+        <span class="hljs-selector-id">#svg-draw-effect-alternate</span> {
+            <span class="hljs-selector-class">.face</span> {
+                <span class="hljs-attribute">animation</span>: draw-alternate <span class="hljs-number">4s</span> linear infinite;
+            }
+        }
+
+        <span class="hljs-selector-id">#svg-draw-effect-half-alternate</span> {
+            <span class="hljs-selector-class">.face</span> {
+                <span class="hljs-attribute">animation</span>: draw-half-alternate <span class="hljs-number">4s</span> linear infinite;
+            }
+        }
+
+        <span class="hljs-keyword">@keyframes</span> draw-alternate {
+            <span class="hljs-number">0%</span> {
+                <span class="hljs-attribute">stroke-dasharray</span>: <span class="hljs-number">188</span>;
+                <span class="hljs-attribute">stroke-dashoffset</span>: <span class="hljs-number">188</span>;
+            }
+
+            <span class="hljs-number">100%</span> {
+                <span class="hljs-attribute">stroke-dasharray</span>: <span class="hljs-number">188</span>;
+                <span class="hljs-attribute">stroke-dashoffset</span>: -<span class="hljs-number">188</span>;
+            }
+        }
+
+        <span class="hljs-keyword">@keyframes</span> draw-half-alternate {
+            <span class="hljs-number">0%</span> {
+                <span class="hljs-attribute">stroke-dasharray</span>: <span class="hljs-number">94</span>;
+                <span class="hljs-attribute">stroke-dashoffset</span>: <span class="hljs-number">188</span>;
+            }
+
+            <span class="hljs-number">100%</span> {
+                <span class="hljs-attribute">stroke-dasharray</span>: <span class="hljs-number">94</span>;
+                <span class="hljs-attribute">stroke-dashoffset</span>: -<span class="hljs-number">188</span>;
+            }
+        }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+                <div id="svg-draw-effect-alternate">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100px" height="100px" viewBox="-2 -1 54 62"
+                        class="menu">
+                        <circle r="30" cx="25" cy="30" stroke="black" stroke-width="1" stroke-linejoin="round"
+                            fill="aquamarine" class="face"></circle>
+                        <ellipse cx="7" cy="15" rx="8" ry="10" fill="white" stroke="black" stroke-width="1.5"
+                            class="eyeouter-left">
+                        </ellipse>
+                        <ellipse cx="7" cy="15" rx="5" ry="5" fill="black" class="eye-left"></ellipse>
+                        <ellipse cx="42" cy="15" rx="8" ry="10" fill="white" stroke="black" stroke-width="1.5"
+                            class="eyeouter-right"></ellipse>
+                        <ellipse cx="42" cy="15" rx="5" ry="5" fill="black" class="eye-right"></ellipse>
+                        <path d="M10,50 13.5,50 17.5,50 21.5,50  25,50   28.5,50  32.5,50  36.25,50 40,50z" fill="red"
+                            stroke="black" stroke-linejoin="round" stroke-width="2" class="smile"></path>
+                    </svg>
+                </div>
+                <div id="svg-draw-effect-half-alternate">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100px" height="100px" viewBox="-2 -1 54 62"
+                        class="menu">
+                        <circle r="30" cx="25" cy="30" stroke="black" stroke-width="1" stroke-linejoin="round"
+                            fill="aquamarine" class="face"></circle>
+                        <ellipse cx="7" cy="15" rx="8" ry="10" fill="white" stroke="black" stroke-width="1.5"
+                            class="eyeouter-left">
+                        </ellipse>
+                        <ellipse cx="7" cy="15" rx="5" ry="5" fill="black" class="eye-left"></ellipse>
+                        <ellipse cx="42" cy="15" rx="8" ry="10" fill="white" stroke="black" stroke-width="1.5"
+                            class="eyeouter-right"></ellipse>
+                        <ellipse cx="42" cy="15" rx="5" ry="5" fill="black" class="eye-right"></ellipse>
+                        <path d="M10,50 13.5,50 17.5,50 21.5,50  25,50   28.5,50  32.5,50  36.25,50 40,50z" fill="red"
+                            stroke="black" stroke-linejoin="round" stroke-width="2" class="smile"></path>
+                    </svg>
+                </div>
+                <style>
+                    #svg-draw-effect-alternate {
+                        .face {
+                            animation: draw-alternate 4s linear infinite;
+                        }
+                    }
+
+                    #svg-draw-effect-half-alternate {
+                        .face {
+                            animation: draw-half-alternate 4s linear infinite;
+                        }
+                    }
+
+                    @keyframes draw-alternate {
+                        0% {
+                            stroke-dasharray: 188;
+                            stroke-dashoffset: 188;
+                        }
+
+                        100% {
+                            stroke-dasharray: 188;
+                            stroke-dashoffset: -188;
+                        }
+                    }
+
+                    @keyframes draw-half-alternate {
+                        0% {
+                            stroke-dasharray: 94;
+                            stroke-dashoffset: 188;
+                        }
+
+                        100% {
+                            stroke-dasharray: 94;
+                            stroke-dashoffset: -188;
+                        }
+                    }
+                </style>
+                <p>Wait, doesn't the half-stroke variant look like a loader? While we are at it, we will create that as
+                    well.</p>
+                <h3 id="final-touches" tabindex="-1">Final Touches</h3>
+                <p>Lets apply all of the concepts above and produce the final result.</p>
+                <blockquote>
+                    <p><strong>Note:</strong>Since this animation runs only once, you may need to refresh the tab to see
+                        it.</p>
+                </blockquote>
+
+                <div id="svg-full-draw">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100px" height="100px" viewBox="-2 -1 54 62"
+                        class="menu">
+                        <circle r="30" cx="25" cy="30" stroke="black" stroke-width="1" stroke-linejoin="round"
+                            fill="aquamarine" class="face"></circle>
+                        <ellipse cx="7" cy="15" rx="8" ry="10" fill="white" stroke="black" stroke-width="1.5"
+                            class="eyeouter">
+                        </ellipse>
+                        <ellipse cx="7" cy="15" rx="5" ry="5" fill="black" class="eye"></ellipse>
+                        <ellipse cx="42" cy="15" rx="8" ry="10" fill="white" stroke="black" stroke-width="1.5"
+                            class="eyeouter">
+                        </ellipse>
+                        <ellipse cx="42" cy="15" rx="5" ry="5" fill="black" class="eye"></ellipse>
+                        <path d="M10,50 13.5,50 17.5,50 21.5,50  25,50   28.5,50  32.5,50  36.25,50 40,50z" fill="red"
+                            stroke="black" stroke-linejoin="round" stroke-width="2" class="smile"></path>
+                    </svg>
+                </div>
+                <style>
+                    #svg-full-draw {
+                        .face {
+                            stroke-dasharray: 188;
+                            animation: draw-full-face 2s linear, fill-face 1s 2s linear backwards;
+                        }
+
+                        .eyeouter {
+                            stroke-dasharray: 56;
+                            animation: draw-full-eye-outer 2s linear;
+                        }
+
+                        .smile {
+                            stroke-dasharray: 60;
+                            animation: draw-full-smile 2s linear, smile 1s 2s linear forwards;
+                        }
+
+                        .eye {
+                            stroke-dasharray: 30;
+                            animation: draw-full-eye 2s linear, fill-eye 1s 2s linear backwards;
+                        }
+                    }
+
+                    @keyframes fill-face {
+                        0% {
+                            fill: rgba(0, 0, 0, 0);
+                        }
+
+                        100% {
+                            fill: aquamarine;
+                        }
+                    }
+
+                    @keyframes fill-eye {
+                        0% {
+                            fill: rgba(0, 0, 0, 0);
+                        }
+
+                        100% {
+                            fill: black;
+                        }
+                    }
+
+                    @keyframes draw-full-face {
+                        0% {
+                            stroke-dashoffset: 188;
+                        }
+
+                        100% {
+                            stroke-dashoffset: 0;
+                        }
+                    }
+
+                    @keyframes draw-full-eye-outer {
+                        0% {
+                            stroke-dashoffset: 56;
+                        }
+
+                        100% {
+                            stroke-dashoffset: 0;
+                        }
+                    }
+
+                    @keyframes draw-full-eye {
+                        0% {
+                            stroke-dashoffset: 30;
+                        }
+
+                        100% {
+                            stroke-dashoffset: 0;
+                        }
+                    }
+
+                    @keyframes draw-full-smile {
+                        0% {
+                            stroke-dashoffset: 60;
+                        }
+
+                        100% {
+                            stroke-dashoffset: 30;
+                        }
+                    }
+
+                    @keyframes smile {
+                        100% {
+                            d: path("M10,50 13.5,52.5  17.5,53.5  21.5,54.5  25,55   28.5, 54.5  32.5,53.5  36.25,52.5 40,50z");
+                        }
+                    }
+                </style>
+                <pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;svg-full-draw&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.w3.org/2000/svg&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;100px&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;100px&quot;</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">&quot;-2 -1 54 62&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;menu&quot;</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">circle</span> <span class="hljs-attr">r</span>=<span class="hljs-string">&quot;30&quot;</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;25&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;30&quot;</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-attr">stroke-linejoin</span>=<span class="hljs-string">&quot;round&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;aquamarine&quot;</span>
+                <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;face&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">circle</span>&gt;</span>
+
+            <span class="hljs-comment">&lt;!-- eyes --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ellipse</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;7&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;15&quot;</span> <span class="hljs-attr">rx</span>=<span class="hljs-string">&quot;8&quot;</span> <span class="hljs-attr">ry</span>=<span class="hljs-string">&quot;10&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;white&quot;</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;1.5&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;eyeouter&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ellipse</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ellipse</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;7&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;15&quot;</span> <span class="hljs-attr">rx</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">ry</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;eye&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ellipse</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">ellipse</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;42&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;15&quot;</span> <span class="hljs-attr">rx</span>=<span class="hljs-string">&quot;8&quot;</span> <span class="hljs-attr">ry</span>=<span class="hljs-string">&quot;10&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;white&quot;</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;1.5&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;eyeouter&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ellipse</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ellipse</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;42&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;15&quot;</span> <span class="hljs-attr">rx</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">ry</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;eye&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ellipse</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">&quot;M10,50 13.5,50 17.5,50 21.5,50  25,50   28.5,50  32.5,50  36.25,50 40,50z&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;red&quot;</span>
+                <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">stroke-linejoin</span>=<span class="hljs-string">&quot;round&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;2&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;smile&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="language-css">
+    <span class="hljs-selector-id">#svg-full-draw</span> {
+        <span class="hljs-selector-class">.face</span> {
+            <span class="hljs-attribute">stroke-dasharray</span>: <span class="hljs-number">188</span>;
+            <span class="hljs-attribute">animation</span>: draw-full-face <span class="hljs-number">2s</span> linear, fill-face <span class="hljs-number">1s</span> <span class="hljs-number">2s</span> linear backwards;
+        }
+
+        <span class="hljs-selector-class">.eyeouter</span> {
+            <span class="hljs-attribute">stroke-dasharray</span>: <span class="hljs-number">56</span>;
+            <span class="hljs-attribute">animation</span>: draw-full-eye-outer <span class="hljs-number">2s</span> linear;
+        }
+
+        <span class="hljs-selector-class">.smile</span> {
+            <span class="hljs-attribute">stroke-dasharray</span>: <span class="hljs-number">60</span>;
+            <span class="hljs-attribute">animation</span>: draw-full-smile <span class="hljs-number">2s</span> linear, smile <span class="hljs-number">1s</span> <span class="hljs-number">2s</span> linear forwards;
+        }
+
+        <span class="hljs-selector-class">.eye</span> {
+            <span class="hljs-attribute">stroke-dasharray</span>: <span class="hljs-number">30</span>;
+            <span class="hljs-attribute">animation</span>: draw-full-eye <span class="hljs-number">2s</span> linear, fill-eye <span class="hljs-number">1s</span> <span class="hljs-number">2s</span> linear backwards;
+        }
+    }
+
+    <span class="hljs-keyword">@keyframes</span> fill-face {
+        <span class="hljs-number">0%</span> {
+            <span class="hljs-attribute">fill</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+        }
+
+        <span class="hljs-number">100%</span> {
+            <span class="hljs-attribute">fill</span>: aquamarine;
+        }
+    }
+
+    <span class="hljs-keyword">@keyframes</span> fill-eye {
+        <span class="hljs-number">0%</span> {
+            <span class="hljs-attribute">fill</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+        }
+
+        <span class="hljs-number">100%</span> {
+            <span class="hljs-attribute">fill</span>: black;
+        }
+    }
+
+    <span class="hljs-keyword">@keyframes</span> draw-full-face {
+        <span class="hljs-number">0%</span> {
+            <span class="hljs-attribute">stroke-dashoffset</span>: <span class="hljs-number">188</span>;
+        }
+
+        <span class="hljs-number">100%</span> {
+            <span class="hljs-attribute">stroke-dashoffset</span>: <span class="hljs-number">0</span>;
+        }
+    }
+
+    <span class="hljs-keyword">@keyframes</span> draw-full-eye-outer {
+        <span class="hljs-number">0%</span> {
+            <span class="hljs-attribute">stroke-dashoffset</span>: <span class="hljs-number">56</span>;
+        }
+
+        <span class="hljs-number">100%</span> {
+            <span class="hljs-attribute">stroke-dashoffset</span>: <span class="hljs-number">0</span>;
+        }
+    }
+
+    <span class="hljs-keyword">@keyframes</span> draw-full-eye {
+        <span class="hljs-number">0%</span> {
+            <span class="hljs-attribute">stroke-dashoffset</span>: <span class="hljs-number">30</span>;
+        }
+
+        <span class="hljs-number">100%</span> {
+            <span class="hljs-attribute">stroke-dashoffset</span>: <span class="hljs-number">0</span>;
+        }
+    }
+
+    <span class="hljs-keyword">@keyframes</span> draw-full-smile {
+        <span class="hljs-number">0%</span> {
+            <span class="hljs-attribute">stroke-dashoffset</span>: <span class="hljs-number">60</span>;
+        }
+
+        <span class="hljs-number">100%</span> {
+            <span class="hljs-attribute">stroke-dashoffset</span>: <span class="hljs-number">30</span>;
+        }
+    }
+
+    <span class="hljs-keyword">@keyframes</span> smile {
+        <span class="hljs-number">100%</span> {
+            d: <span class="hljs-built_in">path</span>(<span class="hljs-string">&quot;M10,50 13.5,52.5  17.5,53.5  21.5,54.5  25,55   28.5, 54.5  32.5,53.5  36.25,52.5 40,50z&quot;</span>);
+        }
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+                <p>Wait, that's too much css. Is there any way to do it. Yes, there is but it provides less flexibility
+                    than animating with css.
+                    Introducing <code>&lt;animate&gt;</code></p>
+                <div class="draw-full-animate">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100px" height="100px" viewBox="-2 -1 54 62">
+                        <circle r="30" cx="25" cy="30" stroke="black" stroke-width="1" stroke-linejoin="round"
+                            fill="white" stroke-dasharray="188">
+                            <animate attributeName="stroke-dashoffset" values="188;0" dur="2s" />
+                            <animate attributeName="fill" from="rgb(255,255,255)" to="aquamarine" begin="2s" dur="1s"
+                                fill="freeze" />
+                        </circle>
+                        <ellipse cx="7" cy="15" rx="8" ry="10" fill="white" stroke="black" stroke-width="1.5"
+                            stroke-dasharray="56">
+                            <animate attributeName="stroke-dashoffset" values="56;0" dur="2s" />
+                        </ellipse>
+                        <ellipse cx="7" cy="15" rx="5" ry="5" fill="white" class="eye" stroke-dasharray="30">
+                            <animate attributeName="stroke-dashoffset" values="30;0" dur="2s" />
+                            <animate attributeName="fill" values="white;black" begin="2s" dur="1s" fill="freeze" />
+                        </ellipse>
+
+                        <ellipse cx="42" cy="15" rx="8" ry="10" fill="white" stroke="black" stroke-width="1.5"
+                            stroke-dasharray="56">
+                            <animate attributeName="stroke-dashoffset" values="56;0" dur="2s" />
+                        </ellipse>
+                        <ellipse cx="42" cy="15" rx="5" ry="5" class="eye" fill="white">
+                            <animate attributeName="stroke-dashoffset" values="30;0" dur="2s" />
+                            <animate attributeName="fill" from="white" to="black" begin="2s" dur="1s" fill="freeze" />
+                        </ellipse>
+
+                        <path d="M10,50 13.5,50 17.5,50 21.5,50  25,50   28.5,50  32.5,50  36.25,50 40,50z" fill="red"
+                            stroke="black" stroke-linejoin="round" stroke-width="2" stroke-dasharray="60"
+                            stroke-dashoffset="60">
+                            <animate attributeName="d" begin="2s"
+                                values="M10,50 13.5,50 17.5,50 21.5,50  25,50   28.5,50  32.5,50  36.25,50 40,50z; M10,50 13.5,52.5  17.5,53.5  21.5,54.5  25,55   28.5, 54.5  32.5,53.5  36.25,52.5 40,50z"
+                                dur="1s" fill="freeze" />
+                        </path>
+                    </svg>
+                </div>
+                <style>
+                    .draw-full-animate {
+                        path {
+                            animation: draw-full-smile 1.9s linear forwards;
+                        }
+                    }
+
+                    @keyframes draw-full-smile {
+                        0% {
+                            stroke-dashoffset: 60;
+                        }
+
+                        100% {
+                            stroke-dashoffset: 0;
+                        }
+                    }
+                </style>
+
+                <pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;svg-full-draw-auto&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.w3.org/2000/svg&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;100px&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;100px&quot;</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">&quot;-2 -1 54 62&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;menu&quot;</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">circle</span> <span class="hljs-attr">r</span>=<span class="hljs-string">&quot;30&quot;</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;25&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;30&quot;</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-attr">stroke-linejoin</span>=<span class="hljs-string">&quot;round&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;white&quot;</span>
+            <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;face&quot;</span> <span class="hljs-attr">stroke-dasharray</span>=<span class="hljs-string">&quot;188&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">animate</span> <span class="hljs-attr">attributeName</span>=<span class="hljs-string">&quot;stroke-dashoffset&quot;</span> <span class="hljs-attr">values</span>=<span class="hljs-string">&quot;188;0&quot;</span> <span class="hljs-attr">dur</span>=<span class="hljs-string">&quot;2s&quot;</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">animate</span> <span class="hljs-attr">attributeName</span>=<span class="hljs-string">&quot;fill&quot;</span> <span class="hljs-attr">from</span>=<span class="hljs-string">&quot;rgb(255,255,255)&quot;</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;aquamarine&quot;</span> <span class="hljs-attr">begin</span>=<span class="hljs-string">&quot;2s&quot;</span> <span class="hljs-attr">dur</span>=<span class="hljs-string">&quot;1s&quot;</span>
+                <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;freeze&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">circle</span>&gt;</span>
+
+        <span class="hljs-comment">&lt;!-- eyes --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ellipse</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;7&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;15&quot;</span> <span class="hljs-attr">rx</span>=<span class="hljs-string">&quot;8&quot;</span> <span class="hljs-attr">ry</span>=<span class="hljs-string">&quot;10&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;white&quot;</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;1.5&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;eyeouter&quot;</span>
+            <span class="hljs-attr">stroke-dasharray</span>=<span class="hljs-string">&quot;56&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">animate</span> <span class="hljs-attr">attributeName</span>=<span class="hljs-string">&quot;stroke-dashoffset&quot;</span> <span class="hljs-attr">values</span>=<span class="hljs-string">&quot;56;0&quot;</span> <span class="hljs-attr">dur</span>=<span class="hljs-string">&quot;2s&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ellipse</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ellipse</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;7&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;15&quot;</span> <span class="hljs-attr">rx</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">ry</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;white&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;eye&quot;</span> <span class="hljs-attr">stroke-dasharray</span>=<span class="hljs-string">&quot;30&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">animate</span> <span class="hljs-attr">attributeName</span>=<span class="hljs-string">&quot;stroke-dashoffset&quot;</span> <span class="hljs-attr">values</span>=<span class="hljs-string">&quot;30;0&quot;</span> <span class="hljs-attr">dur</span>=<span class="hljs-string">&quot;2s&quot;</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">animate</span> <span class="hljs-attr">attributeName</span>=<span class="hljs-string">&quot;fill&quot;</span> <span class="hljs-attr">values</span>=<span class="hljs-string">&quot;white;black&quot;</span> <span class="hljs-attr">begin</span>=<span class="hljs-string">&quot;2s&quot;</span> <span class="hljs-attr">dur</span>=<span class="hljs-string">&quot;1s&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;freeze&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ellipse</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">ellipse</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;42&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;15&quot;</span> <span class="hljs-attr">rx</span>=<span class="hljs-string">&quot;8&quot;</span> <span class="hljs-attr">ry</span>=<span class="hljs-string">&quot;10&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;white&quot;</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;1.5&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;eyeouter&quot;</span>
+            <span class="hljs-attr">stroke-dasharray</span>=<span class="hljs-string">&quot;56&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">animate</span> <span class="hljs-attr">attributeName</span>=<span class="hljs-string">&quot;stroke-dashoffset&quot;</span> <span class="hljs-attr">values</span>=<span class="hljs-string">&quot;56;0&quot;</span> <span class="hljs-attr">dur</span>=<span class="hljs-string">&quot;2s&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ellipse</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ellipse</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;42&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;15&quot;</span> <span class="hljs-attr">rx</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">ry</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;eye&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;white&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">animate</span> <span class="hljs-attr">attributeName</span>=<span class="hljs-string">&quot;stroke-dashoffset&quot;</span> <span class="hljs-attr">values</span>=<span class="hljs-string">&quot;30;0&quot;</span> <span class="hljs-attr">dur</span>=<span class="hljs-string">&quot;2s&quot;</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">animate</span> <span class="hljs-attr">attributeName</span>=<span class="hljs-string">&quot;fill&quot;</span> <span class="hljs-attr">from</span>=<span class="hljs-string">&quot;white&quot;</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">begin</span>=<span class="hljs-string">&quot;2s&quot;</span> <span class="hljs-attr">dur</span>=<span class="hljs-string">&quot;1s&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;freeze&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ellipse</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">&quot;M10,50 13.5,50 17.5,50 21.5,50  25,50   28.5,50  32.5,50  36.25,50 40,50z&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;red&quot;</span>
+            <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">stroke-linejoin</span>=<span class="hljs-string">&quot;round&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;2&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;smile&quot;</span> <span class="hljs-attr">stroke-dasharray</span>=<span class="hljs-string">&quot;60&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">animate</span> <span class="hljs-attr">attributeName</span>=<span class="hljs-string">&quot;stroke-dashoffset&quot;</span> <span class="hljs-attr">values</span>=<span class="hljs-string">&quot;60;30&quot;</span> <span class="hljs-attr">dur</span>=<span class="hljs-string">&quot;2s&quot;</span> /&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">animate</span> <span class="hljs-attr">attributeName</span>=<span class="hljs-string">&quot;d&quot;</span> <span class="hljs-attr">begin</span>=<span class="hljs-string">&quot;2s&quot;</span>
+                <span class="hljs-attr">from</span>=<span class="hljs-string">&quot;M10,50 13.5,50 17.5,50 21.5,50  25,50   28.5,50  32.5,50  36.25,50 40,50z&quot;</span>
+                <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;M10,50 13.5,52.5  17.5,53.5  21.5,54.5  25,55   28.5, 54.5  32.5,53.5  36.25,52.5 40,50z&quot;</span>
+                <span class="hljs-attr">dur</span>=<span class="hljs-string">&quot;1s&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;freeze&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+
+                <blockquote>
+                    <p><strong>Note:</strong> If you couldnot get it working, you can mix both approaches to make it
+                        work</p>
+                </blockquote>
+
+                <hr>
+
+                <h2 id="more-examples" tabindex="-1">More Examples</h2>
+                <h3 id="loader" tabindex="-1">Loader</h3>
+                <p>For the loader we will use a gradient background. and continue how we did above.</p>
+                <pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;100&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;100&quot;</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.w3.org/2000/svg&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="language-css">
+        <span class="hljs-selector-class">.loader</span> {
+            <span class="hljs-attribute">animation</span>: rotate <span class="hljs-number">1s</span> linear infinite;
+            <span class="hljs-attribute">transform-origin</span>: <span class="hljs-number">50%</span> <span class="hljs-number">50%</span>;
+        }
+        <span class="hljs-keyword">@keyframes</span> rotate {
+            <span class="hljs-selector-tag">from</span> {
+                <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">0deg</span>);
+            }
+
+            <span class="hljs-selector-tag">to</span> {
+                <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">360deg</span>);
+            }
+        }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">defs</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">linearGradient</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;gradientStroke&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">stop</span> <span class="hljs-attr">offset</span>=<span class="hljs-string">&quot;0%&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;stop-color:#003cff; stop-opacity:1&quot;</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">stop</span> <span class="hljs-attr">offset</span>=<span class="hljs-string">&quot;25%&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;stop-color:#003cff; stop-opacity:0.5&quot;</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">stop</span> <span class="hljs-attr">offset</span>=<span class="hljs-string">&quot;80%&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;stop-color:#003cff; stop-opacity:0&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">linearGradient</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">defs</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">circle</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;loader&quot;</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">&quot;50&quot;</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">&quot;50&quot;</span> <span class="hljs-attr">r</span>=<span class="hljs-string">&quot;40&quot;</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;url(#gradientStroke)&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;none&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+</code></pre>
+                <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="gradientStroke">
+                            <stop offset="0%" style="stop-color:#003cff;stop-opacity:1" />
+                            <stop offset="25%" style="stop-color:#003cff;stop-opacity:.5" />
+                            <stop offset="80%" style="stop-color:#003cff;stop-opacity:0" />
+                        </linearGradient>
+                    </defs>
+                    <circle class="loader" cx="50" cy="50" r="40" stroke="url(#gradientStroke)" stroke-width="5"
+                        fill="none" />
+                </svg>
+                <style>
+                    .loader {
+                        animation: rotate-loader 1s linear infinite;
+                        transform-origin: 50% 50%
+                    }
+
+                    @keyframes rotate-loader {
+                        from {
+                            transform: rotate(0)
+                        }
+
+                        to {
+                            transform: rotate(360deg)
+                        }
+                    }
+                </style>
+                <p>The &lt;defs&gt; element in SVG stands for &quot;definitions.&quot; It is a container used to define
+                    reusable elements
+                    and resources that can be referenced later in your SVG document.
+                    The linearGradient element is used to define a linear gradient. A linear gradient is defined by an
+                    axis and two or
+                    more color-stop points. The color of the gradient is determined by the color of the start and end
+                    points, as well as
+                    the color of the intermediate color-stop points.</p>
+                <h3 id="appear" tabindex="-1">Appear</h3>
+                <p>I have created a simple svg, now we need to animate it. Lets make the words appear one by one.</p>
+                <pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">&quot;136.464 138.499 222.8365 121.672&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;222.8365&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;121.672&quot;</span>
+<span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.w3.org/2000/svg&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">path</span> 
+    <span class="hljs-attr">d</span>=<span class="hljs-string">&quot;M 136.807 258.551 L 136.464 143.644 L 141.266 142.958 L 167.335 251.691 L 171.451 252.034 L 169.393 140.9 L 173.509 139.871 L 174.881 255.464 L 167.335 256.836 L 164.591 256.493 L 140.58 155.992 L 142.638 258.894 L 136.807 258.551 Z&quot;</span>
+    <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">transform</span>=<span class="hljs-string">&quot;matrix(1, 0, 0, 1, -7.105427357601002e-15, -7.105427357601002e-15)&quot;</span>&gt;</span>
+   
+<span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;black&quot;</span>
+    <span class="hljs-attr">d</span>=<span class="hljs-string">&quot;M 188.163 139.185 L 187.572 256.15 L 208.839 256.493 L 208.839 246.888 L 193.479 248.604 L 192.495 198.525 L 208.248 199.897 L 208.642 191.321 L 193.282 190.978 L 191.707 147.074 L 208.642 146.388 L 208.248 139.185 L 188.163 139.185 Z&quot;</span>
+    <span class="hljs-attr">stroke-dasharray</span>=<span class="hljs-string">&quot;341&quot;</span> <span class="hljs-attr">transform</span>=<span class="hljs-string">&quot;matrix(1, 0, 0, 1, -7.105427357601002e-15, -7.105427357601002e-15)&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">path</span>  <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;black&quot;</span>
+    <span class="hljs-attr">d</span>=<span class="hljs-string">&quot;M 223.931 139.185 L 230.448 138.499 L 247.941 194.409 L 266.806 141.586 L 276.068 142.272 L 252.4 204.356 L 270.237 254.435 L 262.347 253.749 L 246.569 204.013 L 230.448 257.865 L 223.588 257.179 L 242.796 195.781 L 223.931 139.185 Z&quot;</span>
+    <span class="hljs-attr">stroke-dasharray</span>=<span class="hljs-string">&quot;497&quot;</span> <span class="hljs-attr">transform</span>=<span class="hljs-string">&quot;matrix(1, 0, 0, 1, -7.105427357601002e-15, -7.105427357601002e-15)&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;black&quot;</span>
+    <span class="hljs-attr">d</span>=<span class="hljs-string">&quot;M 281.556 141.929 L 351.186 142.272 L 350.5 149.475 L 322.031 147.417 L 318.258 257.865 L 313.113 257.865 L 316.2 148.103 L 281.213 147.074 L 281.556 141.929 Z&quot;</span>
+    <span class="hljs-attr">stroke-dasharray</span>=<span class="hljs-string">&quot;371&quot;</span> <span class="hljs-attr">transform</span>=<span class="hljs-string">&quot;matrix(1, 0, 0, 1, -7.105427357601002e-15, -7.105427357601002e-15)&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+</code></pre>
+                <p><svg viewBox="136.464 138.499 222.8365 121.672" width="222.8365" height="121.672"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M 136.807 258.551 L 136.464 143.644 L 141.266 142.958 L 167.335 251.691 L 171.451 252.034 L 169.393 140.9 L 173.509 139.871 L 174.881 255.464 L 167.335 256.836 L 164.591 256.493 L 140.58 155.992 L 142.638 258.894 L 136.807 258.551 Z"
+                            fill="black" transform="matrix(1, 0, 0, 1, -7.105427357601002e-15, -7.105427357601002e-15)">
+                        </path>
+                        <path fill="black"
+                            d="M 188.163 139.185 L 187.572 256.15 L 208.839 256.493 L 208.839 246.888 L 193.479 248.604 L 192.495 198.525 L 208.248 199.897 L 208.642 191.321 L 193.282 190.978 L 191.707 147.074 L 208.642 146.388 L 208.248 139.185 L 188.163 139.185 Z"
+                            stroke-dasharray="341"
+                            transform="matrix(1, 0, 0, 1, -7.105427357601002e-15, -7.105427357601002e-15)">
+                        </path>
+                        <path fill="black"
+                            d="M 223.931 139.185 L 230.448 138.499 L 247.941 194.409 L 266.806 141.586 L 276.068 142.272 L 252.4 204.356 L 270.237 254.435 L 262.347 253.749 L 246.569 204.013 L 230.448 257.865 L 223.588 257.179 L 242.796 195.781 L 223.931 139.185 Z"
+                            stroke-dasharray="497"
+                            transform="matrix(1, 0, 0, 1, -7.105427357601002e-15, -7.105427357601002e-15)">
+                        </path>
+                        <path fill="black"
+                            d="M 281.556 141.929 L 351.186 142.272 L 350.5 149.475 L 322.031 147.417 L 318.258 257.865 L 313.113 257.865 L 316.2 148.103 L 281.213 147.074 L 281.556 141.929 Z"
+                            stroke-dasharray="371"
+                            transform="matrix(1, 0, 0, 1, -7.105427357601002e-15, -7.105427357601002e-15)">
+                        </path>
+                    </svg></p>
+                <pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">&quot;136.464 138.499 222.8365 121.672&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;222.8365&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;121.672&quot;</span>
+<span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.w3.org/2000/svg&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">path</span> 
+    <span class="hljs-attr">d</span>=<span class="hljs-string">&quot;M 136.807 258.551 L 136.464 143.644 L 141.266 142.958 L 167.335 251.691 L 171.451 252.034 L 169.393 140.9 L 173.509 139.871 L 174.881 255.464 L 167.335 256.836 L 164.591 256.493 L 140.58 155.992 L 142.638 258.894 L 136.807 258.551 Z&quot;</span>
+    <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;white&quot;</span> <span class="hljs-attr">transform</span>=<span class="hljs-string">&quot;matrix(1, 0, 0, 1, -7.105427357601002e-15, -7.105427357601002e-15)&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">animate</span> <span class="hljs-attr">attributeName</span>=<span class="hljs-string">&quot;fill&quot;</span> <span class="hljs-attr">from</span>=<span class="hljs-string">&quot;white&quot;</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">begin</span>=<span class="hljs-string">&quot;0s&quot;</span> <span class="hljs-attr">dur</span>=<span class="hljs-string">&quot;1s&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;freeze&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;white&quot;</span>
+    <span class="hljs-attr">d</span>=<span class="hljs-string">&quot;M 188.163 139.185 L 187.572 256.15 L 208.839 256.493 L 208.839 246.888 L 193.479 248.604 L 192.495 198.525 L 208.248 199.897 L 208.642 191.321 L 193.282 190.978 L 191.707 147.074 L 208.642 146.388 L 208.248 139.185 L 188.163 139.185 Z&quot;</span>
+    <span class="hljs-attr">stroke-dasharray</span>=<span class="hljs-string">&quot;341&quot;</span> <span class="hljs-attr">transform</span>=<span class="hljs-string">&quot;matrix(1, 0, 0, 1, -7.105427357601002e-15, -7.105427357601002e-15)&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">animate</span> <span class="hljs-attr">attributeName</span>=<span class="hljs-string">&quot;fill&quot;</span> <span class="hljs-attr">from</span>=<span class="hljs-string">&quot;white&quot;</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">begin</span>=<span class="hljs-string">&quot;1s&quot;</span> <span class="hljs-attr">dur</span>=<span class="hljs-string">&quot;1s&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;freeze&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">path</span>  <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;white&quot;</span>
+    <span class="hljs-attr">d</span>=<span class="hljs-string">&quot;M 223.931 139.185 L 230.448 138.499 L 247.941 194.409 L 266.806 141.586 L 276.068 142.272 L 252.4 204.356 L 270.237 254.435 L 262.347 253.749 L 246.569 204.013 L 230.448 257.865 L 223.588 257.179 L 242.796 195.781 L 223.931 139.185 Z&quot;</span>
+    <span class="hljs-attr">stroke-dasharray</span>=<span class="hljs-string">&quot;497&quot;</span> <span class="hljs-attr">transform</span>=<span class="hljs-string">&quot;matrix(1, 0, 0, 1, -7.105427357601002e-15, -7.105427357601002e-15)&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">animate</span> <span class="hljs-attr">attributeName</span>=<span class="hljs-string">&quot;fill&quot;</span> <span class="hljs-attr">from</span>=<span class="hljs-string">&quot;white&quot;</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">begin</span>=<span class="hljs-string">&quot;2s&quot;</span> <span class="hljs-attr">dur</span>=<span class="hljs-string">&quot;1s&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;freeze&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;white&quot;</span>
+    <span class="hljs-attr">d</span>=<span class="hljs-string">&quot;M 281.556 141.929 L 351.186 142.272 L 350.5 149.475 L 322.031 147.417 L 318.258 257.865 L 313.113 257.865 L 316.2 148.103 L 281.213 147.074 L 281.556 141.929 Z&quot;</span>
+    <span class="hljs-attr">stroke-dasharray</span>=<span class="hljs-string">&quot;371&quot;</span> <span class="hljs-attr">transform</span>=<span class="hljs-string">&quot;matrix(1, 0, 0, 1, -7.105427357601002e-15, -7.105427357601002e-15)&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">animate</span> <span class="hljs-attr">attributeName</span>=<span class="hljs-string">&quot;fill&quot;</span> <span class="hljs-attr">from</span>=<span class="hljs-string">&quot;white&quot;</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">begin</span>=<span class="hljs-string">&quot;3s&quot;</span> <span class="hljs-attr">dur</span>=<span class="hljs-string">&quot;1s&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;freeze&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+</code></pre>
+                <p><svg viewBox="136.464 138.499 222.8365 121.672" width="222.8365" height="121.672"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M 136.807 258.551 L 136.464 143.644 L 141.266 142.958 L 167.335 251.691 L 171.451 252.034 L 169.393 140.9 L 173.509 139.871 L 174.881 255.464 L 167.335 256.836 L 164.591 256.493 L 140.58 155.992 L 142.638 258.894 L 136.807 258.551 Z"
+                            fill="white" transform="matrix(1, 0, 0, 1, -7.105427357601002e-15, -7.105427357601002e-15)">
+                            <animate attributeName="fill" from="white" to="black" begin="0s" dur="1s" fill="freeze" />
+                        </path>
+                        <path fill="white"
+                            d="M 188.163 139.185 L 187.572 256.15 L 208.839 256.493 L 208.839 246.888 L 193.479 248.604 L 192.495 198.525 L 208.248 199.897 L 208.642 191.321 L 193.282 190.978 L 191.707 147.074 L 208.642 146.388 L 208.248 139.185 L 188.163 139.185 Z"
+                            stroke-dasharray="341"
+                            transform="matrix(1, 0, 0, 1, -7.105427357601002e-15, -7.105427357601002e-15)">
+                            <animate attributeName="fill" from="white" to="black" begin="1s" dur="1s" fill="freeze" />
+                        </path>
+                        <path fill="white"
+                            d="M 223.931 139.185 L 230.448 138.499 L 247.941 194.409 L 266.806 141.586 L 276.068 142.272 L 252.4 204.356 L 270.237 254.435 L 262.347 253.749 L 246.569 204.013 L 230.448 257.865 L 223.588 257.179 L 242.796 195.781 L 223.931 139.185 Z"
+                            stroke-dasharray="497"
+                            transform="matrix(1, 0, 0, 1, -7.105427357601002e-15, -7.105427357601002e-15)">
+                            <animate attributeName="fill" from="white" to="black" begin="2s" dur="1s" fill="freeze" />
+                        </path>
+                        <path fill="white"
+                            d="M 281.556 141.929 L 351.186 142.272 L 350.5 149.475 L 322.031 147.417 L 318.258 257.865 L 313.113 257.865 L 316.2 148.103 L 281.213 147.074 L 281.556 141.929 Z"
+                            stroke-dasharray="371"
+                            transform="matrix(1, 0, 0, 1, -7.105427357601002e-15, -7.105427357601002e-15)">
+                            <animate attributeName="fill" from="white" to="black" begin="3s" dur="1s" fill="freeze" />
+                        </path>
+                    </svg></p>
+
+                <hr>
+                <h3 id="draw-path" tabindex="-1">Draw Path</h3>
+                <p>Let's take what we have learned and animate this express icon svg that I copied from <a
+                        href="https://devicon.dev/">Devicons</a>. Its very long 😅</p>
+                <pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;express-logo&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">&quot;123.169 224.9971 123.7769 27.6219&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;1230.7769&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;270.6219&quot;</span>
+            <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.w3.org/2000/svg&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">&quot;M 161.569 252.619 L 161.569 225.539 L 163.039
+            225.539 L 163.039 229.799 C 163.213 229.611 163.373 229.41 163.519 229.199 C 164.745 226.654 167.334 225.048 170.159 225.079 C 173.509 224.979 176.229 
+            226.219 177.829 229.199 C 179.895 232.956 180.014 237.479 178.149 241.339 C 176.659 244.679 172.979 246.339 169.039 245.729 C 166.548 245.517 164.334
+            244.056 163.159 241.849 L 163.159 252.619 L 161.569 252.619 Z M 163.039 235.119 C 163.169 236.439 163.219 237.379 163.369 238.299 C 163.949 241.919 166.089
+            244.069 169.449 244.459 C 172.702 244.994 175.88 243.156 177.039 240.069 C 178.345 236.955 178.25 233.429 176.779 230.389 C 175.547 227.633 172.638 
+            226.026 169.649 226.449 C 166.849 226.652 164.484 228.607 163.759 231.319 C 163.446 232.571 163.205 233.84 163.039 235.119 L 163.039 235.119 
+            Z M 209.449 238.799 C 208.988 242.743 205.679 245.736 201.709 245.799 C 195.549 246.109 192.659 242.019 192.199 237.299 C 191.88 234.736 192.296 
+            232.135 193.399 229.799 C 194.975 226.512 198.498 224.623 202.109 225.129 C 205.539 225.42 208.399 227.873 209.209 231.219 C 209.522 232.705 209.752
+            234.208 209.899 235.719 L 193.709 235.719 C 193.409 239.999 195.709 243.439 198.969 244.269 C 203.029 245.269 206.499 243.509 207.759 239.649 C 208.039 
+            238.659 208.549 238.519 209.449 238.799 L 209.449 238.799 Z M 193.709 234.349 L 208.179 234.349 C 208.089 229.789 205.249 226.489 201.399 226.439 C 
+            197.039 226.369 193.899 229.549 193.709 234.349 Z M 212.429 238.899 L 213.849 238.899 C 213.956 241.029 215.245 242.921 217.189 243.799 C 219.614 244.891
+            222.405 244.817 224.769 243.599 C 226.072 243.012 226.87 241.675 226.769 240.249 C 226.844 238.87 225.995 237.609 224.689 237.159 C 223.129 236.579 
+            221.469 236.259 219.879 235.749 C 218.225 235.278 216.607 234.687 215.039 233.979 C 212.479 232.729 212.319 227.859 215.219 226.319 C 218.236 224.617 
+            221.911 224.56 224.979 226.169 C 226.852 227.204 227.888 229.292 227.579 231.409 L 226.359 231.409 C 226.359 231.349 226.249 231.299 226.249 231.239
+            C 226.099 227.349 222.839 226.149 219.339 226.489 C 218.294 226.618 217.279 226.926 216.339 227.399 C 215.181 227.929 214.484 229.131 214.599 230.399 
+            C 214.602 231.668 215.403 232.797 216.599 233.219 C 218.139 233.779 219.749 234.139 221.329 234.579 C 222.599 234.929 223.919 235.159 225.149 235.579 
+            C 226.926 236.162 228.159 237.781 228.249 239.649 C 228.553 241.7 227.51 243.715 225.659 244.649 C 222.319 246.539 216.819 246.039 214.369 243.649 
+            C 213.115 242.388 212.416 240.678 212.429 238.899 L 212.429 238.899 Z M 246.249 231.409 L 244.919 231.409 C 244.919 231.229 244.849 231.069 244.829 
+            230.919 C 244.784 228.865 243.308 227.121 241.289 226.739 C 239.44 226.209 237.468 226.304 235.679 227.009 C 234.226 227.426 233.221 228.748 233.209
+            230.259 C 233.158 231.749 234.16 233.069 235.609 233.419 C 237.609 234.039 239.659 234.419 241.689 234.979 C 242.347 235.137 242.995 235.334 243.629
+            235.569 C 247.253 236.866 248.114 241.599 245.179 244.09 C 244.795 244.416 244.363 244.682 243.899 244.879 C 241.045 246.175 237.778 246.208 234.899 
+            244.969 C 232.501 243.935 231.001 241.517 231.139 238.909 L 232.439 238.909 C 233.479 243.928 239.237 246.335 243.539 243.549 C 244.776 242.906
+            245.526 241.602 245.459 240.209 C 245.521 238.829 244.659 237.576 243.349 237.139 C 241.789 236.559 240.129 236.249 238.539 235.739 C 236.875 
+            235.275 235.247 234.691 233.669 233.989 C 231.169 232.759 230.969 227.929 233.819 226.389 C 236.877 224.613 240.642 224.572 243.739 226.279 C 
+            245.518 227.341 246.502 229.353 246.249 231.409 L 246.249 231.409 Z M 159.139 245.309 C 158.055 245.72 156.836 245.256 156.299 244.229 C 154.669 
+            241.789 152.869 239.459 151.139 237.079 L 150.389 236.079 C 148.329 238.839 146.269 241.489 144.389 244.239 C 143.882 245.22 142.727 245.673 141.689
+            245.299 L 149.419 234.929 L 142.229 225.559 C 143.296 225.174 144.487 225.592 145.079 226.559 C 146.749 228.999 148.599 231.329 150.439 233.799 C
+            152.289 231.349 154.119 229.009 155.829 226.589 C 156.339 225.624 157.491 225.194 158.509 225.589 L 155.719 229.289 C 154.469 230.939 153.239
+            232.599 151.939 234.209 C 151.495 234.607 151.495 235.302 151.939 235.699 C 154.329 238.869 156.699 242.049 159.139 245.309 L 159.139 245.309
+            Z M 191.959 225.459 L 191.959 226.859 C 187.676 226.578 184.088 230.06 184.239 234.349 L 184.239 245.349 L 182.809 245.349 L 182.809 225.539
+            L 184.209 225.539 L 184.209 229.599 C 185.939 226.639 188.609 225.539 191.959 225.459 L 191.959 225.459 Z M 123.169 234.799 C 123.379 233.799 
+            123.509 232.709 123.799 231.689 C 125.529 225.539 132.579 222.979 137.429 226.789 C 140.269 229.019 140.979 232.179 140.839 235.739 L 124.839
+            235.739 C 124.579 242.099 129.169 245.939 135.039 243.979 C 136.973 243.287 138.428 241.667 138.909 239.669 C 139.219 238.669 139.719 238.499
+            140.669 238.789 C 140.352 241.256 138.922 243.441 136.789 244.719 C 133.22 246.671 128.802 246.106 125.839 243.319 C 124.41 241.713 123.546
+            239.683 123.379 237.539 C 123.379 237.199 123.249 236.859 123.179 236.539 C 123.172 235.946 123.169 235.366 123.169 234.799 L 123.169
+            234.799 Z M 124.859 234.369 L 139.329 234.369 C 139.239 229.759 136.329 226.489 132.449 226.459 C 128.129 226.399 125.039 229.599 124.849 
+            234.349 L 124.859 234.369 Z&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;stroke: rgb(0, 0, 0); fill: black&quot;</span>
+            <span class="hljs-attr">transform</span>=<span class="hljs-string">&quot;matrix(1, 0, 0, 1, -1.4210854715202004e-14, -2.842170943040401e-14)&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+                <p>Like before, we can create some css animations for the stroke-offset. But first lets calculate the
+                    length of the
+                    path. using the js snippet above.
+                    For just a single path we can just do:</p>
+                <pre><code class="hljs">    <span class="hljs-keyword">let</span> path = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">&quot;path&quot;</span>);
+    <span class="hljs-keyword">let</span> pathLength = path.<span class="hljs-title function_">getTotalLength</span>();
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(pathLength); <span class="hljs-comment">//we get 819.3381958007812</span>
+</code></pre>
+                <p>So our stroke-dashoffset will begin from 819. For this animation, I had to try different time
+                    durations for the animation to get it right. I ended up using the following css.</p>
+                <pre><code class="hljs"><span class="hljs-selector-tag">path</span> {
+	<span class="hljs-attribute">animation</span>: draw <span class="hljs-number">10s</span> ease-in, fill <span class="hljs-number">1s</span> <span class="hljs-number">3s</span> linear forwards;
+	<span class="hljs-attribute">stroke-dasharray</span>: <span class="hljs-number">819</span>;
+	<span class="hljs-attribute">stroke</span>: black;
+}
+
+<span class="hljs-keyword">@keyframes</span> draw {
+	<span class="hljs-number">0%</span> {
+		<span class="hljs-attribute">stroke-dashoffset</span>: <span class="hljs-number">819</span>;
+		<span class="hljs-attribute">fill</span>: white;
+	}
+	<span class="hljs-number">95%</span> {
+		<span class="hljs-attribute">stroke-dashoffset</span>: <span class="hljs-number">100</span>;
+		<span class="hljs-attribute">fill</span>: white;
+	}
+	<span class="hljs-number">100%</span> {
+		<span class="hljs-attribute">fill</span>: black;
+	}
+}
+<span class="hljs-keyword">@keyframes</span> fill {
+	<span class="hljs-number">0%</span> {
+		<span class="hljs-attribute">fill</span>: white;
+	}
+	<span class="hljs-number">100%</span> {
+		<span class="hljs-attribute">fill</span>: black;
+	}
+}
+</code></pre>
+                <p>The final result:</p>
+                <div id="express-logo">
+                    <svg viewBox="123.169 224.9971 123.7769 27.6219" width="616" height="135"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 161.569 252.619 L 161.569 225.539 L 163.039
+            225.539 L 163.039 229.799 C 163.213 229.611 163.373 229.41 163.519 229.199 C 164.745 226.654 167.334 225.048 170.159 225.079 C 173.509 224.979 176.229 
+            226.219 177.829 229.199 C 179.895 232.956 180.014 237.479 178.149 241.339 C 176.659 244.679 172.979 246.339 169.039 245.729 C 166.548 245.517 164.334
+            244.056 163.159 241.849 L 163.159 252.619 L 161.569 252.619 Z M 163.039 235.119 C 163.169 236.439 163.219 237.379 163.369 238.299 C 163.949 241.919 166.089
+            244.069 169.449 244.459 C 172.702 244.994 175.88 243.156 177.039 240.069 C 178.345 236.955 178.25 233.429 176.779 230.389 C 175.547 227.633 172.638 
+            226.026 169.649 226.449 C 166.849 226.652 164.484 228.607 163.759 231.319 C 163.446 232.571 163.205 233.84 163.039 235.119 L 163.039 235.119 
+            Z M 209.449 238.799 C 208.988 242.743 205.679 245.736 201.709 245.799 C 195.549 246.109 192.659 242.019 192.199 237.299 C 191.88 234.736 192.296 
+            232.135 193.399 229.799 C 194.975 226.512 198.498 224.623 202.109 225.129 C 205.539 225.42 208.399 227.873 209.209 231.219 C 209.522 232.705 209.752
+            234.208 209.899 235.719 L 193.709 235.719 C 193.409 239.999 195.709 243.439 198.969 244.269 C 203.029 245.269 206.499 243.509 207.759 239.649 C 208.039 
+            238.659 208.549 238.519 209.449 238.799 L 209.449 238.799 Z M 193.709 234.349 L 208.179 234.349 C 208.089 229.789 205.249 226.489 201.399 226.439 C 
+            197.039 226.369 193.899 229.549 193.709 234.349 Z M 212.429 238.899 L 213.849 238.899 C 213.956 241.029 215.245 242.921 217.189 243.799 C 219.614 244.891
+            222.405 244.817 224.769 243.599 C 226.072 243.012 226.87 241.675 226.769 240.249 C 226.844 238.87 225.995 237.609 224.689 237.159 C 223.129 236.579 
+            221.469 236.259 219.879 235.749 C 218.225 235.278 216.607 234.687 215.039 233.979 C 212.479 232.729 212.319 227.859 215.219 226.319 C 218.236 224.617 
+            221.911 224.56 224.979 226.169 C 226.852 227.204 227.888 229.292 227.579 231.409 L 226.359 231.409 C 226.359 231.349 226.249 231.299 226.249 231.239
+            C 226.099 227.349 222.839 226.149 219.339 226.489 C 218.294 226.618 217.279 226.926 216.339 227.399 C 215.181 227.929 214.484 229.131 214.599 230.399 
+            C 214.602 231.668 215.403 232.797 216.599 233.219 C 218.139 233.779 219.749 234.139 221.329 234.579 C 222.599 234.929 223.919 235.159 225.149 235.579 
+            C 226.926 236.162 228.159 237.781 228.249 239.649 C 228.553 241.7 227.51 243.715 225.659 244.649 C 222.319 246.539 216.819 246.039 214.369 243.649 
+            C 213.115 242.388 212.416 240.678 212.429 238.899 L 212.429 238.899 Z M 246.249 231.409 L 244.919 231.409 C 244.919 231.229 244.849 231.069 244.829 
+            230.919 C 244.784 228.865 243.308 227.121 241.289 226.739 C 239.44 226.209 237.468 226.304 235.679 227.009 C 234.226 227.426 233.221 228.748 233.209
+            230.259 C 233.158 231.749 234.16 233.069 235.609 233.419 C 237.609 234.039 239.659 234.419 241.689 234.979 C 242.347 235.137 242.995 235.334 243.629
+            235.569 C 247.253 236.866 248.114 241.599 245.179 244.09 C 244.795 244.416 244.363 244.682 243.899 244.879 C 241.045 246.175 237.778 246.208 234.899 
+            244.969 C 232.501 243.935 231.001 241.517 231.139 238.909 L 232.439 238.909 C 233.479 243.928 239.237 246.335 243.539 243.549 C 244.776 242.906
+            245.526 241.602 245.459 240.209 C 245.521 238.829 244.659 237.576 243.349 237.139 C 241.789 236.559 240.129 236.249 238.539 235.739 C 236.875 
+            235.275 235.247 234.691 233.669 233.989 C 231.169 232.759 230.969 227.929 233.819 226.389 C 236.877 224.613 240.642 224.572 243.739 226.279 C 
+            245.518 227.341 246.502 229.353 246.249 231.409 L 246.249 231.409 Z M 159.139 245.309 C 158.055 245.72 156.836 245.256 156.299 244.229 C 154.669 
+            241.789 152.869 239.459 151.139 237.079 L 150.389 236.079 C 148.329 238.839 146.269 241.489 144.389 244.239 C 143.882 245.22 142.727 245.673 141.689
+            245.299 L 149.419 234.929 L 142.229 225.559 C 143.296 225.174 144.487 225.592 145.079 226.559 C 146.749 228.999 148.599 231.329 150.439 233.799 C
+            152.289 231.349 154.119 229.009 155.829 226.589 C 156.339 225.624 157.491 225.194 158.509 225.589 L 155.719 229.289 C 154.469 230.939 153.239
+            232.599 151.939 234.209 C 151.495 234.607 151.495 235.302 151.939 235.699 C 154.329 238.869 156.699 242.049 159.139 245.309 L 159.139 245.309
+            Z M 191.959 225.459 L 191.959 226.859 C 187.676 226.578 184.088 230.06 184.239 234.349 L 184.239 245.349 L 182.809 245.349 L 182.809 225.539
+            L 184.209 225.539 L 184.209 229.599 C 185.939 226.639 188.609 225.539 191.959 225.459 L 191.959 225.459 Z M 123.169 234.799 C 123.379 233.799 
+            123.509 232.709 123.799 231.689 C 125.529 225.539 132.579 222.979 137.429 226.789 C 140.269 229.019 140.979 232.179 140.839 235.739 L 124.839
+            235.739 C 124.579 242.099 129.169 245.939 135.039 243.979 C 136.973 243.287 138.428 241.667 138.909 239.669 C 139.219 238.669 139.719 238.499
+            140.669 238.789 C 140.352 241.256 138.922 243.441 136.789 244.719 C 133.22 246.671 128.802 246.106 125.839 243.319 C 124.41 241.713 123.546
+            239.683 123.379 237.539 C 123.379 237.199 123.249 236.859 123.179 236.539 C 123.172 235.946 123.169 235.366 123.169 234.799 L 123.169
+            234.799 Z M 124.859 234.369 L 139.329 234.369 C 139.239 229.759 136.329 226.489 132.449 226.459 C 128.129 226.399 125.039 229.599 124.849 
+            234.349 L 124.859 234.369 Z" style="stroke:#000;fill:#000"
+                            transform="matrix(1, 0, 0, 1, -1.4210854715202004e-14, -2.842170943040401e-14)">
+                        </path>
+                    </svg>
+                </div>
+                <style>
+                    #express-logo {
+                        path {
+                            animation: express-draw 10s ease-in infinite;
+                            stroke-dasharray: 819;
+                            stroke: black;
+                            fill: black;
+                        }
+                    }
+
+                    @keyframes express-draw {
+                        0% {
+                            stroke-dashoffset: 819;
+                            fill: white;
+                        }
+
+                        20% {
+                            fill: rgb(255, 255, 255);
+                        }
+
+                        30% {
+                            stroke-dashoffset: 410;
+                            fill: black;
+                        }
+
+                        60% {
+                            stroke-dashoffset: 0;
+                        }
+                    }
+                </style>
+
+                <hr>
+                <h3 id="underline-animations" tabindex="-1">Underline animations</h3>
+                <p>I have created two svg underlines. Now all we need to do is to add this under a text. Let's do that:
+                </p>
+                <h4 id="underline-1" tabindex="-1">Underline-1</h4>
+                <pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;333&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;33&quot;</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">&quot;0 0 333 33&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;none&quot;</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.w3.org/2000/svg&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;underline-1&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="language-css">
+<span class="hljs-selector-class">.path</span>{
+  <span class="hljs-attribute">stroke-dasharray</span>: <span class="hljs-number">500</span>;
+  <span class="hljs-attribute">stroke-dashoffset</span>: <span class="hljs-number">1000</span>;
+  <span class="hljs-attribute">animation</span>: dash <span class="hljs-number">2.5s</span> linear forwards infinite;
+}
+<span class="hljs-keyword">@keyframes</span> dash {
+  <span class="hljs-selector-tag">to</span>{
+    <span class="hljs-attribute">stroke-dashoffset</span>: <span class="hljs-number">0</span>;
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;path&quot;</span>  <span class="hljs-attr">d</span>=<span class="hljs-string">&quot;M1 3.62862C256.027 25.746 326.93 12.8442 330.503 3.62862C234.962 0.807528 39.5925 2.38734 22.4403 31.2753&quot;</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;#00A3FF&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;3.38531&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+</code></pre>
+                <svg width="333" height="33" viewBox="0 0 333 33" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    id="underline-1">
+                    <style>
+                        .path {
+                            stroke-dasharray: 500;
+                            stroke-dashoffset: 1000;
+                            animation: dash 2.5s linear forwards infinite
+                        }
+
+                        @keyframes dash {
+                            to {
+                                stroke-dashoffset: 0
+                            }
+                        }
+                    </style>
+                    <path class="path"
+                        d="M1 3.62862C256.027 25.746 326.93 12.8442 330.503 3.62862C234.962 0.807528 39.5925 2.38734 22.4403 31.2753"
+                        stroke="#00A3FF" stroke-width="3.38531" />
+                </svg>
+                <h4 id="underline-2" tabindex="-1">Underline-2</h4>
+                <pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;333&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;33&quot;</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">&quot;0 0 333 33&quot;</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">&quot;none&quot;</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.w3.org/2000/svg&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;underline-1&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="language-css">
+<span class="hljs-selector-class">.path</span>{
+  <span class="hljs-attribute">stroke-dasharray</span>: <span class="hljs-number">500</span>;
+  <span class="hljs-attribute">stroke-dashoffset</span>: <span class="hljs-number">1000</span>;
+  <span class="hljs-attribute">animation</span>: dash <span class="hljs-number">2.5s</span> linear forwards infinite;
+}
+<span class="hljs-keyword">@keyframes</span> dash {
+  <span class="hljs-selector-tag">to</span>{
+    <span class="hljs-attribute">stroke-dashoffset</span>: <span class="hljs-number">0</span>;
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;path&quot;</span>  <span class="hljs-attr">d</span>=<span class="hljs-string">&quot;M1 3.62862C256.027 25.746 326.93 12.8442 330.503 3.62862C234.962 0.807528 39.5925 2.38734 22.4403 31.2753&quot;</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">&quot;#00A3FF&quot;</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">&quot;3.38531&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+</code></pre>
+                <svg viewBox="91.11 212.957 272.383 45.398" width="272.383px" height="45.398px"
+                    xmlns="http://www.w3.org/2000/svg" id="underline-2">
+                    <style>
+                        path {
+                            animation: draw-underline 2s ease-in-out infinite
+                        }
+
+                        @keyframes draw-underline {
+                            from {
+                                stroke-dashoffset: 744
+                            }
+
+                            to {
+                                stroke-dashoffset: 0
+                            }
+                        }
+                    </style>
+                    <path
+                        style="fill:transparent;stroke-width:7px;stroke-linecap:round;stroke-linejoin:round;stroke:#0bf"
+                        d="M 91.11 225.787 L 363.493 212.957 L 152.9 240.097 L 312.421 241.084 L 220.996 250.953 L 224.149 258.355"
+                        transform="matrix(0.9999999999999999, 0, 0, 0.9999999999999999, 0, 0)" stroke-dasharray="744"
+                        id="underline-path" />
+                </svg>
+                <h4 id="in-action" tabindex="-1">In action</h4>
+                <p>I have encoded the svg as a data url, but you can use your external or internal urls as well. The
+                    encoder was from <a href="https://yoksel.github.io/url-encoder/">this encoder</a></p>
+                <pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-1&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Text 1<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="language-css">
+    <span class="hljs-selector-class">.text-1</span>&gt;<span class="hljs-selector-tag">span</span> {
+	<span class="hljs-attribute">position</span>: relative;
+    <span class="hljs-attribute">font-size</span>:<span class="hljs-number">50px</span>;
+}
+<span class="hljs-selector-class">.text-1</span>&gt;<span class="hljs-selector-tag">span</span><span class="hljs-selector-pseudo">::after</span> {
+    <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">&quot;data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzMzIiBoZWlnaHQ9IjMzIiB2aWV3Qm94PSIwIDAgMzMzIDMzIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJ1bmRlcmxpbmUtMSI+CjxzdHlsZT4KLnBhdGh7CiAgc3Ryb2tlLWRhc2hhcnJheTogNTAwOwogIHN0cm9rZS1kYXNob2Zmc2V0OiAxMDAwOwogIGFuaW1hdGlvbjogZGFzaCAyLjVzIGxpbmVhciBmb3J3YXJkcyBpbmZpbml0ZTsKfQpAa2V5ZnJhbWVzIGRhc2ggewogIHRvewogICAgc3Ryb2tlLWRhc2hvZmZzZXQ6IDA7CiAgfQp9Cjwvc3R5bGU+CjxwYXRoIGNsYXNzPSJwYXRoIiAgZD0iTTEgMy42Mjg2MkMyNTYuMDI3IDI1Ljc0NiAzMjYuOTMgMTIuODQ0MiAzMzAuNTAzIDMuNjI4NjJDMjM0Ljk2MiAwLjgwNzUyOCAzOS41OTI1IDIuMzg3MzQgMjIuNDQwMyAzMS4yNzUzIiBzdHJva2U9IiMwMEEzRkYiIHN0cm9rZS13aWR0aD0iMy4zODUzMSIvPgo8L3N2Zz4=&quot;</span>);
+    <span class="hljs-attribute">background-size</span>: contain;
+    <span class="hljs-attribute">background-repeat</span>: no-repeat;
+    <span class="hljs-attribute">position</span>: absolute;
+    <span class="hljs-attribute">top</span>:<span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">left</span>: -<span class="hljs-number">50%</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">200%</span>;
+    <span class="hljs-attribute">z-index</span>: -<span class="hljs-number">1</span>;
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+                <div class="text-1"><span>Text 1</span></div>
+                <style>
+                    .text-1>span {
+                        position: relative;
+                        font-size: 50px
+                    }
+
+                    .text-1>span::after {
+                        content: "";
+                        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzMzIiBoZWlnaHQ9IjMzIiB2aWV3Qm94PSIwIDAgMzMzIDMzIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJ1bmRlcmxpbmUtMSI+CjxzdHlsZT4KLnBhdGh7CiAgc3Ryb2tlLWRhc2hhcnJheTogNTAwOwogIHN0cm9rZS1kYXNob2Zmc2V0OiAxMDAwOwogIGFuaW1hdGlvbjogZGFzaCAyLjVzIGxpbmVhciBmb3J3YXJkcyBpbmZpbml0ZTsKfQpAa2V5ZnJhbWVzIGRhc2ggewogIHRvewogICAgc3Ryb2tlLWRhc2hvZmZzZXQ6IDA7CiAgfQp9Cjwvc3R5bGU+CjxwYXRoIGNsYXNzPSJwYXRoIiAgZD0iTTEgMy42Mjg2MkMyNTYuMDI3IDI1Ljc0NiAzMjYuOTMgMTIuODQ0MiAzMzAuNTAzIDMuNjI4NjJDMjM0Ljk2MiAwLjgwNzUyOCAzOS41OTI1IDIuMzg3MzQgMjIuNDQwMyAzMS4yNzUzIiBzdHJva2U9IiMwMEEzRkYiIHN0cm9rZS13aWR0aD0iMy4zODUzMSIvPgo8L3N2Zz4=);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        position: absolute;
+                        top: 100%;
+                        left: -50%;
+                        height: 100px;
+                        width: 200%;
+                        z-index: -1
+                    }
+                </style>
+                <br>
+                <br>
+                <pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-2&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Text 2<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="language-css">
+    <span class="hljs-selector-class">.text-2</span>&gt;<span class="hljs-selector-tag">span</span> {
+	<span class="hljs-attribute">position</span>: relative;
+    <span class="hljs-attribute">font-size</span>:<span class="hljs-number">50px</span>;
+}
+<span class="hljs-selector-class">.text-2</span>&gt;<span class="hljs-selector-tag">span</span><span class="hljs-selector-pseudo">::after</span> {
+    <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">&quot;data:image/svg+xml,%3Csvg viewBox=&#x27;91.11 212.957 272.383 45.398&#x27; width=&#x27;272.383px&#x27; height=&#x27;45.398px&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; id=&#x27;underline-2&#x27;%3E%3Cstyle%3E%0Apath%7B animation:draw-underline 2s ease-in-out infinite;%0A%7D%0A@keyframes draw-underline%7B from%7B stroke-dashoffset:744; %7D to%7B stroke-dashoffset:0; %7D%0A%7D%0A%3C/style%3E%3Cpath style=&#x27;fill: rgba(0, 0, 0, 0); stroke-width: 7px; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(0, 187, 255);&#x27; d=&#x27;M 91.11 225.787 L 363.493 212.957 L 152.9 240.097 L 312.421 241.084 L 220.996 250.953 L 224.149 258.355&#x27; transform=&#x27;matrix(0.9999999999999999, 0, 0, 0.9999999999999999, 0, 0)&#x27; stroke-dasharray=&#x27;744&#x27; id=&#x27;underline-path&#x27;/%3E%3C/svg%3E&quot;</span>);
+    <span class="hljs-attribute">background-size</span>: contain;
+    <span class="hljs-attribute">background-repeat</span>: no-repeat;
+    <span class="hljs-attribute">position</span>: absolute;
+    <span class="hljs-attribute">top</span>:<span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">left</span>: -<span class="hljs-number">50%</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">200%</span>;
+    <span class="hljs-attribute">z-index</span>: -<span class="hljs-number">1</span>;
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+                <div class="text-2"><span>Text 2</span></div>
+                <style>
+                    .text-2>span {
+                        position: relative;
+                        font-size: 50px
+                    }
+
+                    .text-2>span::after {
+                        content: "";
+                        background-image: url("data:image/svg+xml,%3Csvg viewBox='91.11 212.957 272.383 45.398' width='272.383px' height='45.398px' xmlns='http://www.w3.org/2000/svg' id='underline-2'%3E%3Cstyle%3E%0Apath%7B animation:draw-underline 2s ease-in-out infinite;%0A%7D%0A@keyframes draw-underline%7B from%7B stroke-dashoffset:744; %7D to%7B stroke-dashoffset:0; %7D%0A%7D%0A%3C/style%3E%3Cpath style='fill: rgba(0, 0, 0, 0); stroke-width: 7px; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(0, 187, 255);' d='M 91.11 225.787 L 363.493 212.957 L 152.9 240.097 L 312.421 241.084 L 220.996 250.953 L 224.149 258.355' transform='matrix(0.9999999999999999, 0, 0, 0.9999999999999999, 0, 0)' stroke-dasharray='744' id='underline-path'/%3E%3C/svg%3E");
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        position: absolute;
+                        top: 100%;
+                        left: -50%;
+                        height: 100px;
+                        width: 200%;
+                        z-index: -1
+                    }
+                </style>
+                <br>
+                <br>
+                <hr>
+                <h2 id="conclusion" tabindex="-1">Conclusion</h2>
+                <p>CSS and SVG make a powerful combination for creating high-performance animations. With just a few
+                    lines of CSS, you can animate colors, shapes, strokes, and even morph one shape into another. These
+                    animations are lightweight and fully scalable, ensuring your designs look sharp on any device.</p>
+                <p>The examples in this guide cover the basics, but CSS SVG animations offer endless possibilities for
+                    creative expression. Use this guide as a headstart on your svg animations journey.</p>
+
+                <div class="d-flex justify-content-between w-100 gap-3">
+                    <a href="/navbar.html" class="btn btn-dark">Prev: Responsive navbar CSS only</a>
+                    <a href="/navbar.html" class="btn btn-dark">Next: Responsive navbar CSS only</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
