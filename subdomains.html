@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <title>Configuring Subdomains with Github pages</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name="description"
+        content="A guide to configuring custom subdomains with github pages">
+    <meta name="keywords" content="domain, custom, github, github pages, beginner guide, guide">
+    <meta name="author" content="PG">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <style type="text/css">
+        code {
+            white-space: pre-wrap;
+            line-height: 1.3em;
+            font-style: normal;
+            border-radius: 4px;
+            max-height: 500px;
+            box-shadow: inset 0 0 2px rgba(0, 0, 0, .3)
+        }
+
+        figure img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .katex {
+            font-size: initial !important
+        }
+
+        .sidebar {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            margin-bottom: 20px
+        }
+
+        .sidebar ul {
+            padding-left: 10px
+        }
+
+        .sidebar li {
+            list-style-type: none
+        }
+
+        .sidebar a {
+            color: #333
+        }
+
+        .sidebar a .feather {
+            margin-right: 4px;
+            color: #999
+        }
+
+        .sidebar a:active {
+            color: #007bff
+        }
+
+        .sidebar a:active .feather,
+        .sidebar a:hover .feather {
+            color: inherit
+        }
+
+        img {
+            max-width: 100%
+        }
+
+        blockquote {
+            background-color: #fffbe8;
+            border-left: 4px solid gray;
+            padding-left: 20px;
+            font-style: italic
+        }
+    </style>
+    <style type="text/css">
+        pre code.hljs {
+            display: block;
+            overflow-x: auto;
+            padding: 1em
+        }
+
+        code.hljs {
+            padding: 3px 5px
+        }
+
+        .hljs {
+            background: #1e1e1e;
+            color: #dcdcdc
+        }
+
+        .hljs-keyword,
+        .hljs-literal,
+        .hljs-name,
+        .hljs-symbol {
+            color: #569cd6
+        }
+
+        .hljs-link {
+            color: #569cd6;
+            text-decoration: underline
+        }
+
+        .hljs-built_in,
+        .hljs-type {
+            color: #4ec9b0
+        }
+
+        .hljs-class,
+        .hljs-number {
+            color: #b8d7a3
+        }
+
+        .hljs-meta .hljs-string,
+        .hljs-string {
+            color: #d69d85
+        }
+
+        .hljs-regexp,
+        .hljs-template-tag {
+            color: #9a5334
+        }
+
+        .hljs-formula,
+        .hljs-function,
+        .hljs-params,
+        .hljs-subst,
+        .hljs-title {
+            color: #dcdcdc
+        }
+
+        .hljs-comment,
+        .hljs-quote {
+            color: #57a64a;
+            font-style: italic
+        }
+
+        .hljs-doctag {
+            color: #608b4e
+        }
+
+        .hljs-meta,
+        .hljs-meta .hljs-keyword,
+        .hljs-tag {
+            color: #9b9b9b
+        }
+
+        .hljs-template-variable,
+        .hljs-variable {
+            color: #bd63c5
+        }
+
+        .hljs-attr,
+        .hljs-attribute {
+            color: #9cdcfe
+        }
+
+        .hljs-section {
+            color: gold
+        }
+
+        .hljs-emphasis {
+            font-style: italic
+        }
+
+        .hljs-strong {
+            font-weight: 700
+        }
+
+        .hljs-bullet,
+        .hljs-selector-attr,
+        .hljs-selector-class,
+        .hljs-selector-id,
+        .hljs-selector-pseudo,
+        .hljs-selector-tag {
+            color: #d7ba7d
+        }
+
+        .hljs-addition {
+            background-color: #144212;
+            display: inline-block;
+            width: 100%
+        }
+
+        .hljs-deletion {
+            background-color: #600;
+            display: inline-block;
+            width: 100%
+        }
+    </style>
+</head>
+
+<body class="py-5">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="./index.html" class="logo-font">
+                <span class="text-red">PG</span>'s Blog
+            </a>
+
+            <div class="menu-icon-container">
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </label>
+            </div>
+        </div>
+
+        <div class="nav-links">
+            <a href="./index.html">Blog</a>
+            <a href="https://prashantgyawali.github.io/Portfolio/">Portfolio</a>
+            <a href="https://prashantgyawali.github.io/Portfolio/">Projects</a>
+            <a href="https://prashantgyawali.github.io/Portfolio/">Resume</a>
+        </div>
+
+        <div class="nav-expanded">
+            <div class="nav-links-vertical">
+                <a href="./index.html">Blog</a>
+                <a href="https://prashantgyawali.github.io/Portfolio/">Portfolio</a>
+                <a href="https://prashantgyawali.github.io/Portfolio/">Projects</a>
+                <a href="https://prashantgyawali.github.io/Portfolio/">Resume</a>
+            </div>
+        </div>
+    </nav>
+    <style>
+        .logo-font {
+            font-size: min(25px, max(28px, calc(100vw / 10)));
+            text-stroke: 0.5px #171717;
+            -webkit-text-stroke: 0.5px #171717;
+            text-decoration: none;
+        }
+
+        .text-red {
+            color: rgb(255, 0, 0);
+        }
+
+        .navbar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background-color: white;
+            padding: 5px 15px;
+            position: fixed;
+            top: 0;
+            z-index: 10;
+            border-bottom: 2px solid #E5E5E5;
+        }
+
+        .nav-container {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        @media (min-width: 640px) {
+            .nav-container {
+                width: auto;
+                display: block;
+            }
+        }
+
+        .nav-expanded {
+            display: none;
+            padding: 0px max(4vw, 15px) 5px max(4vw, 15px);
+            gap: 5px;
+            flex-direction: column;
+            align-items: start;
+            justify-content: start;
+            background-color: #fbfbfb;
+            border-bottom: #171717 1px solid;
+            border-top: #171717 1px solid;
+
+            user-select: none;
+
+            .nav-links-vertical {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                border-bottom: 1px solid #bababa;
+                gap: 10px;
+
+                a {
+                    color: rgb(81, 81, 81);
+                    position: relative;
+                }
+
+                a::before {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 2.5px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: rgb(0, 0, 255);
+                    transform: scaleX(0);
+                    transform-origin: top left;
+                    transition: transform 0.1s ease;
+                }
+
+                a:hover::before {
+                    transform: scaleX(1);
+                }
+            }
+        }
+
+        .menu-icon-container {
+            display: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: rgb(81, 81, 81);
+            position: relative;
+            text-decoration: none;
+        }
+
+        .nav-links a::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 2.5px;
+            bottom: 0;
+            left: 0;
+            background-color: rgb(0, 0, 255);
+            transform: scaleX(0);
+            transform-origin: top left;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-links a:hover::before {
+            transform: scaleX(1);
+        }
+
+
+        @media (max-width: 640px) {
+            .nav-links {
+                display: none;
+            }
+
+            .menu-icon-container {
+                display: block;
+            }
+
+            #menu-toggle {
+                display: none;
+            }
+
+            .menu-icon {
+                width: 30px;
+                height: 30px;
+                background: url('menu-icon.svg') no-repeat center;
+                cursor: pointer;
+            }
+
+            .navbar:has(#menu-toggle:checked) .nav-expanded {
+                display: flex;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                background-color: #fbfbfb;
+                border-top: 1px solid #171717;
+                border-bottom: 1px solid #171717;
+            }
+
+            .nav-expanded {
+                display: none;
+                padding: 5px 15px;
+            }
+
+            .nav-links-vertical {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                border-bottom: 1px solid #bababa;
+            }
+
+            .nav-links-vertical a {
+                color: rgb(81, 81, 81);
+                position: relative;
+                text-decoration: none;
+            }
+
+            .nav-links-vertical a::before {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 2.5px;
+                bottom: 0;
+                left: 0;
+                background-color: rgb(0, 0, 255);
+                transform: scaleX(0);
+                transform-origin: top left;
+                transition: transform 0.1s ease;
+            }
+
+            .nav-links-vertical a:hover::before {
+                transform: scaleX(1);
+            }
+        }
+    </style>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <nav class="sidebar">
+                    <h4>Table of contents</h4>
+                    <ul>
+                        <li><a href="#cloudflare-dns-settings">Cloudflare dns settings</a></li>
+                        <li><a href="#github-pages-settings">Github Pages settings</a></li>
+                        <li><a href="#things-to-consider">Things to Consider</a>
+                            <ul>
+                                <li><a href="#relative-paths">Relative paths</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#homepage">Homepage</a>
+                            <ul>
+                                <li><a href="#dns-and-build-delays">DNS and Build delays</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+            <div class="col-lg-8 main">
+                <h1>Configuring Subdomains with Github pages</h1>
+                <p>If you want to use custom subdomains to use with github pages this blog will help you with the steps.
+                    For this guide I am using cloudflare dns</p>
+                <h2 id="cloudflare-dns-settings" tabindex="-1">Cloudflare dns settings</h2>
+                <p>Here is what my dns setup looks like at <a href="https://dash.cloudflare.com/">cloudflare
+                        dashboard</a></p>
+                <figure><img src="./images/subdomains/dns-settings.png" alt="Dns settings in cloudflare dashboard">
+                </figure>
+                <p>The content for the A records should be pointing to the IP address of the github pages.
+                    Here is the IP addresses of github pages as mentioned in <a
+                        href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">docs</a>
+                </p>
+                <pre><code class="hljs">185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+</code></pre>
+                <p>The Name field should be your domain name. In my case it was <code>gyawaliprashant.com.np</code></p>
+                <h2 id="github-pages-settings" tabindex="-1">Github Pages settings</h2>
+                <p>Go to the project for which you have created github pages, if you have not created make sure to
+                    create the page.
+                    Then go to repo settings.</p>
+                <p>This is what the settings should look like for your domains.</p>
+                <p>For my case, for the root domain <code>gyawaliprashant.com.np</code></p>
+                <figure><img src="./images/subdomains/domain-settings.png" alt="Github Pages Settings"></figure>
+                <p>For subdomain <code>blog.gyawaliprashant.com.np</code></p>
+                <figure><img src="./images/subdomains/subdomains.png" alt="Github Pages Settings"></figure>
+                <h2 id="things-to-consider" tabindex="-1">Things to Consider</h2>
+                <h3 id="relative-paths" tabindex="-1">Relative paths</h3>
+                <p>Try to use relative paths instead of absolute paths. Relative paths start with <code>./</code> while
+                    absolute paths start with <code>/</code>.
+                    Improperly used absolute paths may cause 404 error for the assets (it caused me lot of headaches)
+                </p>
+                <h2 id="homepage" tabindex="-1">Homepage</h2>
+                <p>For react apps and others, make sure to set the homepage in package.json. Else it will generate
+                    javascript and styles and include then in the html
+                    using absolute paths.</p>
+                <p>Example <code>package.json</code> from my portfolio:</p>
+                <pre><code class="hljs"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;portfolio&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;version&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;0.1.0&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;homepage&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;./&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;dependencies&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    ...<span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+                <h3 id="dns-and-build-delays" tabindex="-1">DNS and Build delays</h3>
+                <p>It <strong>may</strong> take some time for the DNS settings to propagate for your first setup. But
+                    make sure to visit from time to time to see if the site is live on your custom domain.
+                    For me it didnot take more than few minutes, since I already had A records and CNAME for root domain
+                    and www subdomain.</p>
+                <p>Also, since the your project gets rebuilt (for those with build step) when adding the custom domain
+                    on github, you need to wait for it to get built first.</p>
+                <blockquote>
+                    <p>Be patient, its good if you can get it right first try but dont be afraid to google whenever you
+                        get stuck cause thats where the learning happens.</p>
+                </blockquote>
+                <p>Happy Coding 🫡</p>
+
+                <div class="d-flex justify-content-between w-100 gap-3">
+                    <a href="./svg.html" class="btn btn-dark">Prev: SVG animations: A Beginner-Friendly Guide</a>
+                    <a href="./navbar.html" class="btn btn-dark">Next: Responsive Navbar Tailwind and CSS only</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
