@@ -1,0 +1,357 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <title>KU Hackfest 2025: My First 48-Hour Hackathon Experience</title>
+  <style type="text/css">code{white-space:pre-wrap;line-height:1.3em;font-style:normal;border-radius:4px;max-height:500px;box-shadow:inset 0 0 2px rgba(0,0,0,.3)}figure img{display:block;margin-left:auto;margin-right:auto}.katex{font-size:initial!important}.sidebar{position:-webkit-sticky;position:sticky;top:0;margin-bottom:20px}.sidebar ul{padding-left:10px}.sidebar li{list-style-type:none}.sidebar a{color:#333}.sidebar a .feather{margin-right:4px;color:#999}.sidebar a:active{color:#007bff}.sidebar a:active .feather,.sidebar a:hover .feather{color:inherit}img{max-width:100%}blockquote{background-color:#fffbe8;border-left:4px solid gray;padding-left:20px;font-style:italic}</style>
+  <style type="text/css">pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{background:#1e1e1e;color:#dcdcdc}.hljs-keyword,.hljs-literal,.hljs-name,.hljs-symbol{color:#569cd6}.hljs-link{color:#569cd6;text-decoration:underline}.hljs-built_in,.hljs-type{color:#4ec9b0}.hljs-class,.hljs-number{color:#b8d7a3}.hljs-meta .hljs-string,.hljs-string{color:#d69d85}.hljs-regexp,.hljs-template-tag{color:#9a5334}.hljs-formula,.hljs-function,.hljs-params,.hljs-subst,.hljs-title{color:#dcdcdc}.hljs-comment,.hljs-quote{color:#57a64a;font-style:italic}.hljs-doctag{color:#608b4e}.hljs-meta,.hljs-meta .hljs-keyword,.hljs-tag{color:#9b9b9b}.hljs-template-variable,.hljs-variable{color:#bd63c5}.hljs-attr,.hljs-attribute{color:#9cdcfe}.hljs-section{color:gold}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}.hljs-bullet,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-selector-tag{color:#d7ba7d}.hljs-addition{background-color:#144212;display:inline-block;width:100%}.hljs-deletion{background-color:#600;display:inline-block;width:100%}</style>
+
+    <meta name="author" content="PG">
+    <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="KU Hackfest 2025: My First 48-Hour Hackathon Experience">
+<meta name="twitter:description" content="A personal recap of my first 48-hour hackathon at KU Hackfest 2025: forming a team, selecting an idea, rapid prototyping, the tech stack used, the demo, challenges we faced, and practical tips for first-time participants.">
+<meta property="og:title" content="KU Hackfest 2025: My First 48-Hour Hackathon Experience">
+<meta property="og:description" content="A personal recap of my first 48-hour hackathon at KU Hackfest 2025: forming a team, selecting an idea, rapid prototyping, the tech stack used, the demo, challenges we faced, and practical tips for first-time participants.">
+<meta property="og:type" content="article">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+
+<body class="py-5">
+<nav class="navbar">
+<div class="nav-container">
+<a href="./index.html" class="logo-font">
+<span class="text-red">PG</span>'s Blog
+</a>
+
+<div class="menu-icon-container">
+<input type="checkbox" id="menu-toggle">
+<label for="menu-toggle" class="menu-icon">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+</svg>
+</label>
+</div>
+</div>
+
+<div class="nav-links">
+<a href="./index.html">Blog</a>
+<a href="https://gyawaliprashant.com.np">Portfolio</a>
+<a href="https://gyawaliprashant.com.np">Projects</a>
+<a href="https://gyawaliprashant.com.np">Resume</a>
+</div>
+
+<div class="nav-expanded">
+<div class="nav-links-vertical">
+<a href="./index.html">Blog</a>
+<a href="https://gyawaliprashant.com.np">Portfolio</a>
+<a href="https://gyawaliprashant.com.np">Projects</a>
+<a href="https://gyawaliprashant.com.np">Resume</a>
+</div>
+</div>
+</nav>
+<style>
+.logo-font {
+font-size: min(25px, max(28px, calc(100vw / 10)));
+text-stroke: 0.5px #171717;
+-webkit-text-stroke: 0.5px #171717;
+text-decoration: none;
+}
+
+.text-red {
+color: rgb(255, 0, 0);
+}
+
+.navbar {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+background-color: white;
+padding: 5px 15px ; 
+position: fixed;
+top: 0;
+z-index: 10;
+border-bottom: 2px solid #E5E5E5;
+}
+
+.nav-container {
+display: flex; 
+width: 100%;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+}
+
+@media (min-width: 640px) {
+.nav-container {
+width: auto;
+display: block;
+}
+}
+
+.nav-expanded {
+display: none;
+padding: 0px max(4vw, 15px) 5px max(4vw, 15px);
+gap: 5px;
+flex-direction: column;
+align-items: start;
+justify-content: start;
+background-color: #fbfbfb;
+border-bottom: #171717 1px solid;
+border-top: #171717 1px solid;
+
+user-select: none;
+
+.nav-links-vertical {
+display: flex;
+flex-direction: column;
+width: 100%;
+border-bottom: 1px solid #bababa;
+gap: 10px;
+
+a {
+color: rgb(81, 81, 81);
+position: relative;
+}
+
+a::before {
+content: "";
+position: absolute;
+display: block;
+width: 100%;
+height: 2.5px;
+bottom: 0;
+left: 0;
+background-color: rgb(0, 0, 255);
+transform: scaleX(0);
+transform-origin: top left;
+transition: transform 0.1s ease;
+}
+
+a:hover::before {
+transform: scaleX(1);
+}
+}
+}
+
+.menu-icon-container {
+display: none;
+}
+
+.nav-links {
+display: flex;
+gap: 20px;
+}
+
+.nav-links a {
+color: rgb(81, 81, 81);
+position: relative;
+text-decoration: none;
+}
+
+.nav-links a::before {
+content: "";
+position: absolute;
+display: block;
+width: 100%;
+height: 2.5px;
+bottom: 0;
+left: 0;
+background-color: rgb(0, 0, 255);
+transform: scaleX(0);
+transform-origin: top left;
+transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::before {
+transform: scaleX(1);
+}
+
+
+@media (max-width: 640px) {
+.nav-links {
+display: none;
+}
+
+.menu-icon-container {
+display: block;
+}
+
+#menu-toggle {
+display: none;
+}
+
+.menu-icon {
+width: 30px;
+height: 30px;
+background: url('menu-icon.svg') no-repeat center;
+cursor: pointer;
+}
+
+.navbar:has(#menu-toggle:checked) .nav-expanded {
+display: flex;
+position: absolute;
+top: 100%;
+left: 0;
+width: 100%;
+flex-direction: column;
+background-color: #fbfbfb;
+border-top: 1px solid #171717;
+border-bottom: 1px solid #171717;
+}
+
+.nav-expanded {
+display: none;
+padding: 5px 15px;
+}
+
+.nav-links-vertical {
+display: flex;
+flex-direction: column;
+gap: 10px;
+border-bottom: 1px solid #bababa;
+}
+
+.nav-links-vertical a {
+color: rgb(81, 81, 81);
+position: relative;
+text-decoration: none;
+}
+
+.nav-links-vertical a::before {
+content: "";
+position: absolute;
+display: block;
+width: 100%;
+height: 2.5px;
+bottom: 0;
+left: 0;
+background-color: rgb(0, 0, 255);
+transform: scaleX(0);
+transform-origin: top left;
+transition: transform 0.1s ease;
+}
+
+.nav-links-vertical a:hover::before {
+transform: scaleX(1);
+}
+}
+</style>
+    
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <nav class="sidebar">
+          <h4>Table of contents</h4>
+          <ul>
+<li><a href="#shortlisted">Shortlisted!</a></li>
+<li><a href="#day-1-arrival-and-setup">Day 1: Arrival and Setup</a>
+<ul>
+<li><a href="#food-glorious-food-%EF%B8%8F">Food, Glorious Food 🍽️</a></li>
+</ul>
+</li>
+<li><a href="#coding-through-the-night">Coding Through the Night</a>
+<ul>
+<li><a href="#sleeping-arrangements">Sleeping Arrangements</a></li>
+</ul>
+</li>
+<li><a href="#not-everything-was-perfect">Not Everything Was Perfect</a>
+<ul>
+<li><a href="#mentors-and-support">Mentors and Support</a></li>
+</ul>
+</li>
+<li><a href="#day-2-more-coding-more-fun">Day 2: More Coding, More Fun</a></li>
+<li><a href="#final-evaluation-day">Final Evaluation Day</a></li>
+<li><a href="#wrapping-up">Wrapping Up</a></li>
+</ul>
+
+        </nav>
+      </div>
+      <div class="col-lg-8 main">
+        <h1>KU Hackfest 2025: My First 48-Hour Hackathon Experience</h1>
+<p>A few months back, I participated in <strong>KU Hackfest 2025</strong>. KU Hackfest, one of the biggest events under <strong>IT Meet</strong>, is an international-level <strong>48-hour hackathon</strong> held every year at <strong>Kathmandu University, Dhulikhel</strong>. The 2025 edition was scheduled from <strong>24–26 December 2025</strong> and featured a massive prize pool of <strong>NPR 1,70,000</strong>.</p>
+<p>You can find the full details of <a href="https://www.nepvents.com/events/cmj7ekttl00009ugtnsbjj33u">KU Hackfest 2025 on Nepvents</a></p>
+<p>It took some time to convince my friends to participate, mainly because we had to skip classes. I had to assure them that it would be worth it. Eventually, we filled out the registration form on their website. They used GitHub for login, which made me a bit nervous. I was worried that teams might be selected based on GitHub profiles. While I and one other teammate had decent GitHub profiles, the other two did not.</p>
+<p>They also asked for our project idea and how we planned to complete it. That felt counterintuitive to me. I always thought hackathons started with a theme reveal and everyone began coding from scratch. However, the themes/categories were already released, and they were asking for ideas upfront. It almost felt like they were encouraging people to prepare their projects beforehand. While that would technically be disqualification, you can’t completely rule out the possibility.<br>
+<em>Hopefully no one did that :P</em></p>
+<h2 id="shortlisted" tabindex="-1">Shortlisted!</h2>
+<p>Then came the good news, we were <strong>shortlisted</strong>. We were among the <strong>40 selected teams</strong>, which was super exciting. Looking at other team names, I noticed ones like <em>hog2.6</em> and <em>Mini_Pekka</em>. Clearly, there were some Clash Royale fans as well 🤣.</p>
+<p>Just doing the math made me realize how massive the event was:</p>
+<ul>
+<li>40 teams</li>
+<li>4 members per team</li>
+<li><strong>160 participants</strong></li>
+</ul>
+<p>Managing accommodation, internet, food, mentors, volunteers, and everything else for so many people is no small task. Huge respect and special thanks to <strong>Utkrist Neupane</strong>, the Lead Organizer, for making the event possible.</p>
+<figure><img src="./images/kuhackfest/congratulation.png" alt="Congratulation Email"></figure>
+<p><br><br></p>
+<h2 id="day-1-arrival-and-setup" tabindex="-1">Day 1: Arrival and Setup</h2>
+<p>The event started at <strong>9:00 AM</strong>, and thankfully, the organizers had arranged <strong>two buses</strong> from <strong>Kalanki</strong> and <strong>Balaju</strong> to Kathmandu University. Otherwise, changing multiple buses early in the morning just to reach by 9 would have been a nightmare.</p>
+<p>At the entry, we received our <strong>ID cards</strong>, and our tables were already labeled with team names. After a cup of milk tea, we set up our laptops and Wi-Fi and got started.</p>
+<p>At first, we were completely confused about how to begin since we hadn’t prepared anything beforehand. So we did what most developers do, we asked <strong>GPT</strong> for an implementation plan. It quickly gave us a roadmap and even divided tasks among the four of us. From there, we started coding.</p>
+<p>Our project was related to <strong>Vision AI</strong>, a field we had limited experience in. We spent time setting up the project. Design has always been a pain point for us, so we used <strong>Lovable</strong> and other AI tools to create the initial barebones UI. We mostly focused on the logic while AI handled much of the design.</p>
+<h3 id="food-glorious-food-️" tabindex="-1">Food, Glorious Food 🍽️</h3>
+<p>We hadn’t eaten anything since the previous night, so we were starving by lunchtime. Lunch coupons were handed out around <strong>1 PM</strong>, which felt quite late considering the event started at 9 and we had traveled early in the morning. No breakfast was provided.</p>
+<p>Lunch was served at the cafeteria, and honestly, it was really good. Even though it was a college canteen, the food tasted almost like home-cooked food 🤣. I think it was veg… or maybe non-veg? Either way, each day had at least one non-veg meal, which was nice.</p>
+<p>Later that day, we were given snacks,:<strong>samosa, pakoda, jerry</strong>, and drinks. It was refreshing, though since we had eaten lunch not long before, some of it felt wasted. Dinner was also good, but waiting in line with around 60 people wasn’t fun.</p>
+<p>Around midnight, we were given <strong>sandwiches</strong>, but most participants were already full. From what I saw, hardly anyone ate them, and a lot went to waste.</p>
+<p><img src="./images/kuhackfest/snacks.jpg" alt="Snacks"><br>
+<img src="./images/kuhackfest/drinks.jpg" alt="Drinks"><br>
+<img src="./images/kuhackfest/meal.jpg" alt="Meal"></p>
+<p><em>(You’d think we went there just for food, but hey, it’s part of the experience 🤣)</em></p>
+<p><br><br></p>
+<h2 id="coding-through-the-night" tabindex="-1">Coding Through the Night</h2>
+<p>We kept coding and learning new things. I experimented with agentic AI tools for development—basically <em>vibe coding</em>. Earlier, I used to code manually and ask GPT only when things broke. But vibe coding was insanely fast and perfect for a hackathon environment.</p>
+<p>I also learned about a new editor called Antigravity, which was quite powerful. I still did some manual coding, but most of the design work was handled by AI.</p>
+<p>The internet was a bit of a problem. The Wi-Fi was unreliable despite having 5–6 routers. Ethernet worked well, but we only had one cable per team, so most of the development happened on just two laptops basically peer coding lol.</p>
+<p>The atmosphere was chill, but the <strong>cold at night</strong> was brutal. Thankfully, there were warm water dispensers and black coffee available. I didn’t drink much coffee, but it was there for those who needed it. I had brought a thin blanket, which at least helped keep our legs warm.</p>
+<p>Some participants were coding intensely, while others seemed to be constantly checking their internet speed. Meanwhile, a few organizers and volunteers were playing games on the projector.</p>
+<p><br><br></p>
+<h3 id="sleeping-arrangements" tabindex="-1">Sleeping Arrangements</h3>
+<p>Late at night, we were informed about accommodation. We were given <strong>sleeping bags</strong> and told we could sleep on the stage or at the back of the hall. We chose the stage. Surprisingly, it was warmer than expected and definitely a unique experience.</p>
+<p>The next night however, the chain of the sleeping bag slipped off slowly and since the strap was also loose I was shivering cold without knowing why I was feeling that cold. Should have taken better care cause the next morning i was feeling sore throat and light cold. That night we slept under our tables cause we worked till 2-3 am and slept.
+<br><br></p>
+<h2 id="not-everything-was-perfect" tabindex="-1">Not Everything Was Perfect</h2>
+<p>Of course, not everything went smoothly. Late at night, the <strong>toilets inside the hall ran out of water</strong>, which meant no flushing or hand washing. People started using toilets on the lower floor, but those eventually ran out of water too.</p>
+<p>To make things worse, one of our teammates had bowel issues and needed to use the toilet every 3–4 hours. Thankfully, there were other toilets nearby, like near the cafeteria and other halls.
+Oh and the other time, the canteen was different so we waited in the old canteen without knowing it had changed. We were near the last desks so maybe we didnt hear it. Later we realized that the information was sent via discord but we forgot to check discord. 😂</p>
+<p>Also later that day we had an classwork assigned due that midnight so we rushed from dinner to complete the assignment. Some other participants were confused like what could we possibly be building that required all 4 of us to calculate with pen and paper. The later laughed when they learned that it was our assignments.😂</p>
+<h3 id="mentors-and-support" tabindex="-1">Mentors and Support</h3>
+<p>Organizing team members regularly checked in to see if we needed help. There were also mentors available, though most of the time we relied on ChatGPT. One of the mentors was <strong>Kritam Bhattarai</strong>, who had recently won the <strong>ICT Award 2025</strong>. 😮
+<br><br></p>
+<h2 id="day-2-more-coding-more-fun" tabindex="-1">Day 2: More Coding, More Fun</h2>
+<p>The second day followed a similar routine mostly coding. Breakfast was chickpeas (chana), followed by lunch. Dinner and snacks that day were momo, which wasn’t bad at all.</p>
+<p>That night, there were some fun games, like a <strong>word guessing game</strong> where we had to guess words with certain letter sequences. We didn’t make it very far ,it was harder than it looked.</p>
+<p>There was also <strong>bingo</strong>, where each box had a condition (like having 20+ stickers on your laptop). Some people were really into it since it had separate rewards, but we skipped it to focus on our project.</p>
+<p>We also prepared our <strong>presentation slides</strong>, expecting a stage presentation in front of judges and participants.</p>
+<p><br><br></p>
+<h2 id="final-evaluation-day" tabindex="-1">Final Evaluation Day</h2>
+<p>We made our final commits by <strong>9 AM</strong> on the evaluation day. Initially, it seemed like evaluations would be individual, but the judges arrived late. The schedule changed, and multiple teams were evaluated simultaneously at different tables by different judges.</p>
+<p>We were in the <strong>Open Category</strong>. Unfortunately, we didn’t know that <em>no snacks or meals</em> would be provided that day. We waited, only to realize everyone had already gone out to eat. We spent some time in the hall watching <em>Stranger Things</em> until a kind organizer/mentor gave us some cookies and candies.</p>
+<p>Then we got a call that our turn was coming up  much earlier than scheduled. We rushed to the evaluation hall.</p>
+<p>We had even rehearsed a small act for a stage presentation, but since it was a desk evaluation, that effort went to waste. I’m not a great speaker, but I tried my best to present our project to the judges.</p>
+<p>Our project itself was solid, but I think I messed up during the <strong>Q&amp;A round</strong> and couldn’t give the best answers. My teammates were a bit disappointed, but it is what it is.</p>
+<figure><img src="./images/kuhackfest/evaluation.jpg" alt="Evaluation"></figure>
+<p><em>Yes, that’s our team presenting to the judges (we’re behind the image).</em></p>
+<h2 id="wrapping-up" tabindex="-1">Wrapping Up</h2>
+<p>After the evaluation, we had some milk tea and waited for the results. Unfortunately, we didn’t win any awards. Still, it was an amazing learning experience.</p>
+<p>Once the winners were announced, we had our final meal at nearby hotel and headed back home  tired, cold, but happy.</p>
+<p>Overall, <strong>KU Hackfest 2025</strong> was an unforgettable experience, and I’d definitely recommend participating in any such hackathons if you ever get the chance. And for those wondering where to search hackathons, you can find latest <a href="https://nepvents.com">hackathons in Nepal at Nepvents</a>.</p>
+
+      
+    <div class="d-flex justify-content-between w-100 gap-3">
+        <a href="./transforming-hamburger.html" class="btn btn-dark">Prev: Animating Hamburgers Icon</a>
+        <a href="./icon-cloud.html" class="btn btn-dark">Next: Icon Cloud in React</a>
+    </div></div>
+    </div>
+  </div>
+  <script>
+
+</script>
+
+
+</body></html>
